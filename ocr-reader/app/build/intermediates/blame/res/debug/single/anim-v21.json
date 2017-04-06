@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/anim-v21/design_appbar_state_list_animator.xml",
+        "source": "/Users/joshowsiany/.android/build-cache/a8d41b6fa4061d5a1bdee51ddfab60a01c94e203/output/res/anim-v21/design_appbar_state_list_animator.xml"
+    },
+    {
+        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/joshowsiany/.android/build-cache/a8d41b6fa4061d5a1bdee51ddfab60a01c94e203/output/res/anim-v21/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/joshowsiany/.android/build-cache/a8d41b6fa4061d5a1bdee51ddfab60a01c94e203/output/res/anim-v21/design_bottom_sheet_slide_in.xml"
+    }
+]

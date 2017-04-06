@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/joshowsiany/.android/build-cache/d0df6a355bae1679b808849216c42c2aea5dc514/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_fa96669766d25feffcaa69fe8aa2d1c5b8de783c.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_05a0a9e757c7f18967ae9745c055ac4abd75de3f/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/joshowsiany/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_c334c557723471cbc97702532483f95153c14dac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_6ea616481d307ec0b55336ddae8c3d382208cf76.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/joshowsiany/.android/build-cache/c330b0056354a6319a0592614222ab881475ae05/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f4e85eafa876cd7d7641244867dac3f88d71e866">
+        <dex dex="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_9c63be27946482821e143997418076078319c996.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/joshowsiany/.android/build-cache/d0135e92d6e57151118e9a278a64634da64ed577/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="42df48c7305b08b14fa0e84561091b0c24d70d26">
+        <dex dex="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_3bab37e2945a788d163093a5b46eb98c839f07a7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/joshowsiany/.android/build-cache/c5a815a4a1b77e80303a40ee0d5658e98ed1a259/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_fe1ec4911b86fcdc2681b44fd04f9b95ea8bc5bf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/joshowsiany/.android/build-cache/c77e6653a0e93e6ce2d81c64d2404409d2656245/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1941832901fc4e7a93300b53762e9f65d7650b99">
+        <dex dex="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_41090c1722ca34b4e194fe3fc9fd775b401b9f1e.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="af544bdb4f92b993f823d1e0c95e9ea97c2f68d7">
+        <dex dex="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_62386ed4843aa93622318559065c55f94940cc3b/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/joshowsiany/.android/build-cache/c5a815a4a1b77e80303a40ee0d5658e98ed1a259/output/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_783d91f578cc16279ca47ee1b9a592fa4f8548a1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/joshowsiany/.android/build-cache/e710e59d4d925699d6577d962a1cbf547e67a8a5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6f65c144283b31b4b9a70e6e7aa4c4a1c897d4b8">
+        <dex dex="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_aa04522d00defc14c6d024b666f7d1ec559610a8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/joshowsiany/.android/build-cache/07458217659ea1a5d531559efaf5b0c569c079ef/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="cc178928721f3222b3b06bdfbd9497378ccb9792">
+        <dex dex="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_892113e2056b5143d679b410f4dd8fdcdbd0c09a.jar" />
+    </item>
+
+</items>
