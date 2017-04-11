@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "902322422911",
+    "firebase_url": "https://receiptapp-dc5dd.firebaseio.com",
+    "project_id": "receiptapp-dc5dd",
+    "storage_bucket": "receiptapp-dc5dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902322422911:android:cadb82f56a9b2c8a",
+        "android_client_info": {
+          "package_name": "compsci290.edu.duke.receiptanalyzer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "902322422911-3lbr4vje5uhfg8ca39v36fsbs22iuau3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAp3tohYaKZVlCwZwStdSygVZCow1yOxRM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
