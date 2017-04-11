@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/src/debug/jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/src/debug/jniLibs"/></dataSet></merger>
