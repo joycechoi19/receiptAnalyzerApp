@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c323c36ecc68965c4cfb460f7721113d2b61ed03">
+        <dex dex="/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_dccc5da56d25432434578f7d55019c7b2aa498ba/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6f65c144283b31b4b9a70e6e7aa4c4a1c897d4b8">
+        <dex dex="/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d113ec3a627e363c1b003d86ca5c28fd35cba9d6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Stephanie/.android/build-cache/dbdc32a32f2c8482f69f5c8d34563906005e4790/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f4e85eafa876cd7d7641244867dac3f88d71e866">
+        <dex dex="/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9b6c4c3257fe568482388ce65b89fd38e56669bc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Stephanie/.android/build-cache/08352bbf169a981deb12164ea27b41874c4810dd/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1941832901fc4e7a93300b53762e9f65d7650b99">
+        <dex dex="/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9ed07490d2224b13f5c97cb9bec8728457dd9def/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Stephanie/.android/build-cache/04294904a43c6461853ab569e3d36bb525bdb6ce/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c834306334ef24c44f2c477258285d79f64214f0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Stephanie/.android/build-cache/04294904a43c6461853ab569e3d36bb525bdb6ce/output/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.0.1_fb71adbd4f8fedae2364a3eb42b89ea6097c2a3a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="869409cdc4ca2986dee94cfa54811edfad455a0f">
+        <dex dex="/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_429fd70fafa09603fa8da73bfb933e6f19431190/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Stephanie/.android/build-cache/72d390497a9652f53872899ef75da83725cab3ed/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="42df48c7305b08b14fa0e84561091b0c24d70d26">
+        <dex dex="/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e5752dda320c5bff4b5db8ad82d0af3058dda662/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ac57ca7390d2e571fd00b23e091c7983f15f3c6b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Stephanie/.android/build-cache/d71aa8478d88867d95445bb7b2119d13a79b6365/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8e2d407c52a3ce0aa1afa0ade41dc6cb6b739bb5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Stephanie/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.0.1_d3940ff13b6ffa4a2f6836a451c259144d7eb514/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Stephanie/.android/build-cache/8b97e421145e4bfd2be7c8bb0f3a132bdb4b8446/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="cc178928721f3222b3b06bdfbd9497378ccb9792">
+        <dex dex="/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ded2f5ba54bb735f64c9803b164ca0f1b918a305/classes.dex" />
+    </item>
+
+</items>
