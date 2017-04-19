@@ -16,6 +16,10 @@
         "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/color-v23/abc_tint_switch_track.xml"
     },
     {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/Stephanie/.android/build-cache/fd013568b40d4efc306d463ed23382ae0198a220/output/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
         "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
         "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/color-v23/abc_tint_btn_checkable.xml"
     },
