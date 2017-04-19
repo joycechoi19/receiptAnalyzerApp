@@ -1,6 +1,7 @@
 [
     {
         "outputFile": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
+<<<<<<< HEAD
         "map": [
             {
                 "to": {
@@ -1697,6 +1698,8 @@
     },
     {
         "outputFile": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
+=======
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
         "map": [
             {
                 "to": {
@@ -1707,7 +1710,7 @@
                     "endOffset": 119
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/d0df6a355bae1679b808849216c42c2aea5dc514/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/d71aa8478d88867d95445bb7b2119d13a79b6365/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -1726,7 +1729,7 @@
                     "endOffset": 210
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -1745,7 +1748,7 @@
                     "endOffset": 313
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -1764,7 +1767,7 @@
                     "endOffset": 416
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -1783,7 +1786,7 @@
                     "endOffset": 521
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -1802,7 +1805,7 @@
                     "endOffset": 628
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -1821,7 +1824,7 @@
                     "endOffset": 737
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -1840,7 +1843,7 @@
                     "endOffset": 846
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -1859,7 +1862,7 @@
                     "endOffset": 955
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -1878,7 +1881,7 @@
                     "endOffset": 1064
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -1897,7 +1900,7 @@
                     "endOffset": 1173
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -1916,7 +1919,7 @@
                     "endOffset": 1280
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -1935,7 +1938,7 @@
                     "endOffset": 1383
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -1954,7 +1957,7 @@
                     "endOffset": 1502
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -1974,7 +1977,7 @@
                     "endOffset": 1657
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -1995,7 +1998,7 @@
                     "endOffset": 1812
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -2015,7 +2018,7 @@
                     "endOffset": 1917
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 25,
                         "startColumn": 4,
@@ -2034,7 +2037,7 @@
                     "endOffset": 2038
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 26,
                         "startColumn": 4,
@@ -2053,7 +2056,7 @@
                     "endOffset": 2139
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 27,
                         "startColumn": 4,
@@ -2073,7 +2076,7 @@
                     "endOffset": 2286
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 30,
                         "startColumn": 4,
@@ -2094,7 +2097,7 @@
                     "endOffset": 2427
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 32,
                         "startColumn": 4,
@@ -2114,7 +2117,7 @@
                     "endOffset": 2530
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 36,
                         "startColumn": 4,
@@ -2133,7 +2136,7 @@
                     "endOffset": 2649
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 37,
                         "startColumn": 4,
@@ -2152,7 +2155,7 @@
                     "endOffset": 2756
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 38,
                         "startColumn": 4,
@@ -2171,7 +2174,7 @@
                     "endOffset": 2859
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 39,
                         "startColumn": 4,
@@ -2191,7 +2194,7 @@
                     "endOffset": 3006
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 42,
                         "startColumn": 4,
@@ -2212,7 +2215,7 @@
                     "endOffset": 3161
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 44,
                         "startColumn": 4,
@@ -2233,7 +2236,7 @@
                     "endOffset": 3332
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 46,
                         "startColumn": 4,
@@ -2254,7 +2257,7 @@
                     "endOffset": 3481
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 48,
                         "startColumn": 4,
@@ -2275,7 +2278,7 @@
                     "endOffset": 3646
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 50,
                         "startColumn": 4,
@@ -2296,7 +2299,7 @@
                     "endOffset": 3803
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 52,
                         "startColumn": 4,
@@ -2317,7 +2320,7 @@
                     "endOffset": 3954
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 54,
                         "startColumn": 4,
@@ -2337,7 +2340,7 @@
                     "endOffset": 4073
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 58,
                         "startColumn": 4,
@@ -2357,7 +2360,7 @@
                     "endOffset": 4222
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 61,
                         "startColumn": 4,
@@ -2378,7 +2381,7 @@
                     "endOffset": 4371
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 63,
                         "startColumn": 4,
@@ -2398,7 +2401,7 @@
                     "endOffset": 4483
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 67,
                         "startColumn": 4,
@@ -2417,7 +2420,7 @@
                     "endOffset": 4630
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 70,
                         "startColumn": 4,
@@ -2437,7 +2440,7 @@
                     "endOffset": 4783
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 71,
                         "startColumn": 4,
@@ -2458,7 +2461,7 @@
                     "endOffset": 4930
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 73,
                         "startColumn": 4,
@@ -2478,7 +2481,7 @@
                     "endOffset": 5005
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 77,
                         "startColumn": 4,
@@ -2497,7 +2500,7 @@
                     "endOffset": 5094
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 78,
                         "startColumn": 4,
@@ -2516,7 +2519,7 @@
                     "endOffset": 5181
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 79,
                         "startColumn": 4,
@@ -2535,7 +2538,7 @@
                     "endOffset": 5282
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 80,
                         "startColumn": 4,
@@ -2555,7 +2558,7 @@
                     "endOffset": 8688
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 81,
                         "startColumn": 4,
@@ -2576,7 +2579,7 @@
                     "endOffset": 8874
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 129,
                         "startColumn": 4,
@@ -2597,7 +2600,7 @@
                     "endOffset": 12292
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 132,
                         "startColumn": 4,
@@ -2618,7 +2621,7 @@
                     "endOffset": 12490
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 180,
                         "startColumn": 4,
@@ -2639,7 +2642,7 @@
                     "endOffset": 12613
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 185,
                         "startColumn": 4,
@@ -2660,7 +2663,7 @@
                     "endOffset": 12736
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 187,
                         "startColumn": 4,
@@ -2681,7 +2684,7 @@
                     "endOffset": 12849
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 189,
                         "startColumn": 4,
@@ -2702,7 +2705,7 @@
                     "endOffset": 13032
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 191,
                         "startColumn": 4,
@@ -2723,7 +2726,7 @@
                     "endOffset": 13163
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 194,
                         "startColumn": 4,
@@ -2743,7 +2746,7 @@
                     "endOffset": 13280
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 196,
                         "startColumn": 4,
@@ -2762,7 +2765,7 @@
                     "endOffset": 13369
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 197,
                         "startColumn": 4,
@@ -2781,7 +2784,7 @@
                     "endOffset": 13480
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 198,
                         "startColumn": 4,
@@ -2800,7 +2803,7 @@
                     "endOffset": 13607
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 199,
                         "startColumn": 4,
@@ -2819,7 +2822,7 @@
                     "endOffset": 13708
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 200,
                         "startColumn": 4,
@@ -2838,7 +2841,7 @@
                     "endOffset": 13803
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 201,
                         "startColumn": 4,
@@ -2857,7 +2860,7 @@
                     "endOffset": 13926
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 202,
                         "startColumn": 4,
@@ -2876,7 +2879,7 @@
                     "endOffset": 14055
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 203,
                         "startColumn": 4,
@@ -2895,7 +2898,7 @@
                     "endOffset": 14172
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 204,
                         "startColumn": 4,
@@ -2914,7 +2917,7 @@
                     "endOffset": 14265
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 205,
                         "startColumn": 4,
@@ -2934,7 +2937,7 @@
                     "endOffset": 14400
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 206,
                         "startColumn": 4,
@@ -2955,7 +2958,7 @@
                     "endOffset": 14543
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 208,
                         "startColumn": 4,
@@ -2976,7 +2979,7 @@
                     "endOffset": 14678
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 210,
                         "startColumn": 4,
@@ -2997,7 +3000,7 @@
                     "endOffset": 14797
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 212,
                         "startColumn": 4,
@@ -3018,7 +3021,7 @@
                     "endOffset": 14998
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 214,
                         "startColumn": 4,
@@ -3039,7 +3042,7 @@
                     "endOffset": 15117
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 218,
                         "startColumn": 4,
@@ -3059,7 +3062,7 @@
                     "endOffset": 15210
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 220,
                         "startColumn": 4,
@@ -3078,7 +3081,7 @@
                     "endOffset": 15321
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 221,
                         "startColumn": 4,
@@ -3097,7 +3100,7 @@
                     "endOffset": 15377
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 222,
                         "startColumn": 4,
@@ -3117,7 +3120,7 @@
                     "endOffset": 15484
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 223,
                         "startColumn": 4,
@@ -3138,7 +3141,7 @@
                     "endOffset": 15679
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 225,
                         "startColumn": 4,
@@ -3159,7 +3162,7 @@
                     "endOffset": 15790
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 229,
                         "startColumn": 4,
@@ -3180,7 +3183,7 @@
                     "endOffset": 15923
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 231,
                         "startColumn": 4,
@@ -3200,7 +3203,7 @@
                     "endOffset": 16018
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 233,
                         "startColumn": 4,
@@ -3219,7 +3222,7 @@
                     "endOffset": 16109
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 234,
                         "startColumn": 4,
@@ -3238,7 +3241,7 @@
                     "endOffset": 16222
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 235,
                         "startColumn": 4,
@@ -3257,7 +3260,7 @@
                     "endOffset": 16339
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 236,
                         "startColumn": 4,
@@ -3277,7 +3280,7 @@
                     "endOffset": 16478
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 237,
                         "startColumn": 4,
@@ -3298,7 +3301,7 @@
                     "endOffset": 16831
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 241,
                         "startColumn": 4,
@@ -3319,7 +3322,7 @@
                     "endOffset": 17196
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 248,
                         "startColumn": 4,
@@ -3340,7 +3343,7 @@
                     "endOffset": 17876
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 255,
                         "startColumn": 4,
@@ -3360,7 +3363,7 @@
                     "endOffset": 17933
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 265,
                         "startColumn": 4,
@@ -3379,7 +3382,7 @@
                     "endOffset": 17991
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v21/values-v21.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 266,
                         "startColumn": 4,

@@ -25,6 +25,7 @@ ADDED from /Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/
 		ADDED from /Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/src/main/AndroidManifest.xml:8:22-62
 application
 ADDED from /Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/src/main/AndroidManifest.xml:10:5-34:19
+<<<<<<< HEAD
 MERGED from [com.android.support:design:23.0.1] /Users/Stephanie/.android/build-cache/9d3c776a5a09e61504b49480a24777ac01b8b556/output/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/Stephanie/.android/build-cache/fd013568b40d4efc306d463ed23382ae0198a220/output/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-vision:9.0.0] /Users/Stephanie/.android/build-cache/785e0851c62bb53a31cf827dcffe62c050e2f1f0/output/AndroidManifest.xml:5:5-20
@@ -33,6 +34,16 @@ MERGED from [com.google.firebase:firebase-common:9.0.0] /Users/Stephanie/.androi
 MERGED from [com.google.android.gms:play-services-tasks:9.0.0] /Users/Stephanie/.android/build-cache/11555c983c6b1c7d35d18cf55f031d43eaae8b7a/output/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement:9.0.0] /Users/Stephanie/.android/build-cache/7abab2db6ba8a9451ff98b8529832a4033174f70/output/AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:23.0.1] /Users/Stephanie/.android/build-cache/2efd2af6d4c9b9c206d697bb98d974b7b76936dc/output/AndroidManifest.xml:22:5-20
+=======
+MERGED from [com.android.support:design:23.0.1] /Users/Stephanie/.android/build-cache/d71aa8478d88867d95445bb7b2119d13a79b6365/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-vision:9.0.0] /Users/Stephanie/.android/build-cache/dbdc32a32f2c8482f69f5c8d34563906005e4790/output/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base:9.0.0] /Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.firebase:firebase-common:9.0.0] /Users/Stephanie/.android/build-cache/72d390497a9652f53872899ef75da83725cab3ed/output/AndroidManifest.xml:5:5-12:19
+MERGED from [com.google.android.gms:play-services-tasks:9.0.0] /Users/Stephanie/.android/build-cache/08352bbf169a981deb12164ea27b41874c4810dd/output/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:9.0.0] /Users/Stephanie/.android/build-cache/8b97e421145e4bfd2be7c8bb0f3a132bdb4b8446/output/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.0.1] /Users/Stephanie/.android/build-cache/04294904a43c6461853ab569e3d36bb525bdb6ce/output/AndroidManifest.xml:22:5-20
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
 	android:label
 		ADDED from /Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/src/main/AndroidManifest.xml:15:9-40
 	android:supportsRtl
@@ -77,6 +88,7 @@ ADDED from /Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/
 		ADDED from /Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/src/main/AndroidManifest.xml:32:19-100
 uses-sdk
 INJECTED from /Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+<<<<<<< HEAD
 MERGED from [com.android.support:design:23.0.1] /Users/Stephanie/.android/build-cache/9d3c776a5a09e61504b49480a24777ac01b8b556/output/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/Stephanie/.android/build-cache/fd013568b40d4efc306d463ed23382ae0198a220/output/AndroidManifest.xml:20:5-43
 MERGED from [com.google.android.gms:play-services-vision:9.0.0] /Users/Stephanie/.android/build-cache/785e0851c62bb53a31cf827dcffe62c050e2f1f0/output/AndroidManifest.xml:4:5-42
@@ -85,6 +97,16 @@ MERGED from [com.google.firebase:firebase-common:9.0.0] /Users/Stephanie/.androi
 MERGED from [com.google.android.gms:play-services-tasks:9.0.0] /Users/Stephanie/.android/build-cache/11555c983c6b1c7d35d18cf55f031d43eaae8b7a/output/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.0] /Users/Stephanie/.android/build-cache/7abab2db6ba8a9451ff98b8529832a4033174f70/output/AndroidManifest.xml:18:5-42
 MERGED from [com.android.support:support-v4:23.0.1] /Users/Stephanie/.android/build-cache/2efd2af6d4c9b9c206d697bb98d974b7b76936dc/output/AndroidManifest.xml:20:5-43
+=======
+MERGED from [com.android.support:design:23.0.1] /Users/Stephanie/.android/build-cache/d71aa8478d88867d95445bb7b2119d13a79b6365/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-vision:9.0.0] /Users/Stephanie/.android/build-cache/dbdc32a32f2c8482f69f5c8d34563906005e4790/output/AndroidManifest.xml:4:5-42
+MERGED from [com.google.android.gms:play-services-base:9.0.0] /Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-common:9.0.0] /Users/Stephanie/.android/build-cache/72d390497a9652f53872899ef75da83725cab3ed/output/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:9.0.0] /Users/Stephanie/.android/build-cache/08352bbf169a981deb12164ea27b41874c4810dd/output/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:9.0.0] /Users/Stephanie/.android/build-cache/8b97e421145e4bfd2be7c8bb0f3a132bdb4b8446/output/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:23.0.1] /Users/Stephanie/.android/build-cache/04294904a43c6461853ab569e3d36bb525bdb6ce/output/AndroidManifest.xml:20:5-43
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
 	android:targetSdkVersion
 		INJECTED from /Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/src/main/AndroidManifest.xml
@@ -92,6 +114,7 @@ MERGED from [com.android.support:support-v4:23.0.1] /Users/Stephanie/.android/bu
 		INJECTED from /Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/src/main/AndroidManifest.xml
 activity#com.google.android.gms.common.api.GoogleApiActivity
+<<<<<<< HEAD
 ADDED from [com.google.android.gms:play-services-base:9.0.0] /Users/Stephanie/.android/build-cache/8edd04073ac7f86cc2b046b7a4909b45f1b002c3/output/AndroidManifest.xml:20:9-22:45
 	android:exported
 		ADDED from [com.google.android.gms:play-services-base:9.0.0] /Users/Stephanie/.android/build-cache/8edd04073ac7f86cc2b046b7a4909b45f1b002c3/output/AndroidManifest.xml:22:19-43
@@ -115,3 +138,28 @@ ADDED from [com.google.android.gms:play-services-basement:9.0.0] /Users/Stephani
 		ADDED from [com.google.android.gms:play-services-basement:9.0.0] /Users/Stephanie/.android/build-cache/7abab2db6ba8a9451ff98b8529832a4033174f70/output/AndroidManifest.xml:23:13-66
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:9.0.0] /Users/Stephanie/.android/build-cache/7abab2db6ba8a9451ff98b8529832a4033174f70/output/AndroidManifest.xml:22:13-58
+=======
+ADDED from [com.google.android.gms:play-services-base:9.0.0] /Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:9.0.0] /Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:9.0.0] /Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:9.0.0] /Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/AndroidManifest.xml:20:19-85
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:9.0.0] /Users/Stephanie/.android/build-cache/72d390497a9652f53872899ef75da83725cab3ed/output/AndroidManifest.xml:7:9-11:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:9.0.0] /Users/Stephanie/.android/build-cache/72d390497a9652f53872899ef75da83725cab3ed/output/AndroidManifest.xml:8:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:9.0.0] /Users/Stephanie/.android/build-cache/72d390497a9652f53872899ef75da83725cab3ed/output/AndroidManifest.xml:10:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:9.0.0] /Users/Stephanie/.android/build-cache/72d390497a9652f53872899ef75da83725cab3ed/output/AndroidManifest.xml:11:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:9.0.0] /Users/Stephanie/.android/build-cache/72d390497a9652f53872899ef75da83725cab3ed/output/AndroidManifest.xml:9:13-58
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:9.0.0] /Users/Stephanie/.android/build-cache/8b97e421145e4bfd2be7c8bb0f3a132bdb4b8446/output/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:9.0.0] /Users/Stephanie/.android/build-cache/8b97e421145e4bfd2be7c8bb0f3a132bdb4b8446/output/AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:9.0.0] /Users/Stephanie/.android/build-cache/8b97e421145e4bfd2be7c8bb0f3a132bdb4b8446/output/AndroidManifest.xml:22:13-58
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804

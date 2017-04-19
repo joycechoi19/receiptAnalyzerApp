@@ -1,6 +1,7 @@
 [
     {
         "outputFile": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+<<<<<<< HEAD
         "map": [
             {
                 "to": {
@@ -27,6 +28,8 @@
     },
     {
         "outputFile": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+=======
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
         "map": [
             {
                 "to": {
@@ -38,7 +41,7 @@
                     "endOffset": 327
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-hdpi/values-hdpi.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-hdpi/values-hdpi.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

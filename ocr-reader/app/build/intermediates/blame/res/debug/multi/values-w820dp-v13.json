@@ -1,6 +1,7 @@
 [
     {
         "outputFile": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
+<<<<<<< HEAD
         "map": [
             {
                 "to": {
@@ -25,6 +26,8 @@
     },
     {
         "outputFile": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
+=======
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
         "map": [
             {
                 "to": {
@@ -35,7 +38,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/src/main/res/values-w820dp/dimens.xml",
+                    "file": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/src/main/res/values-w820dp/dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

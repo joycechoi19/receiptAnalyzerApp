@@ -1,9 +1,12 @@
 [
     {
+<<<<<<< HEAD
         "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/layout-v17/activity_main.xml",
         "source": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/src/main/res/layout-v17/activity_main.xml"
     },
     {
+=======
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/layout-v17/activity_main.xml",
         "source": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/src/main/res/layout-v17/activity_main.xml"
     }

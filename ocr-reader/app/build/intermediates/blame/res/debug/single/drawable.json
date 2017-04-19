@@ -1,13 +1,14 @@
 [
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_material.xml",
-        "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/drawable/abc_ratingbar_material.xml"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_tab_indicator_material.xml"
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
-        "source": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/drawable/abc_spinner_textfield_background_material.xml"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_light.xml",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable/common_plus_signin_btn_text_light.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
         "source": "/Users/Stephanie/.android/build-cache/fd013568b40d4efc306d463ed23382ae0198a220/output/res/drawable/abc_btn_colored_material.xml"
     },
@@ -18,12 +19,17 @@
     {
         "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_icon_light.xml",
         "source": "/Users/joshowsiany/.android/build-cache/e710e59d4d925699d6577d962a1cbf547e67a8a5/output/res/drawable/common_plus_signin_btn_icon_light.xml"
+=======
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_cab_background_top_material.xml"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
-        "source": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/drawable/abc_btn_check_material.xml"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_text_cursor_material.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
         "source": "/Users/Stephanie/.android/build-cache/9d3c776a5a09e61504b49480a24777ac01b8b556/output/res/drawable/design_fab_background.xml"
     },
@@ -54,20 +60,42 @@
     {
         "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
         "source": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/drawable/abc_text_cursor_material.xml"
+=======
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_btn_colored_material.xml"
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
-        "source": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/drawable/abc_cab_background_internal_bg.xml"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
     },
     {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
+        "source": "/Users/Stephanie/.android/build-cache/d71aa8478d88867d95445bb7b2119d13a79b6365/output/res/drawable/design_fab_background.xml"
+    },
+    {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_textfield_search_material.xml"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
+    },
+    {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+<<<<<<< HEAD
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_full_material.xml",
         "source": "/Users/Stephanie/.android/build-cache/fd013568b40d4efc306d463ed23382ae0198a220/output/res/drawable/abc_ratingbar_full_material.xml"
+=======
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_item_background_holo_dark.xml"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
-        "source": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/drawable/abc_btn_borderless_material.xml"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_switch_thumb_material.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_ic_clear_material.xml",
         "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/drawable/abc_ic_clear_material.xml"
     },
@@ -78,12 +106,25 @@
     {
         "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
         "source": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/drawable/abc_btn_default_mtrl_shape.xml"
+=======
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_btn_borderless_material.xml"
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
-        "source": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/drawable/abc_list_selector_holo_dark.xml"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_full_material.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_ratingbar_full_material.xml"
     },
     {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_btn_check_material.xml"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
+    },
+    {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable/common_google_signin_btn_text_dark.xml"
+    },
+    {
+<<<<<<< HEAD
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",
         "source": "/Users/Stephanie/.android/build-cache/8edd04073ac7f86cc2b046b7a4909b45f1b002c3/output/res/drawable/common_google_signin_btn_text_dark.xml"
     },
@@ -102,12 +143,21 @@
     {
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_icon_light.xml",
         "source": "/Users/Stephanie/.android/build-cache/8edd04073ac7f86cc2b046b7a4909b45f1b002c3/output/res/drawable/common_plus_signin_btn_icon_light.xml"
+=======
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_edit_text_material.xml"
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
-        "source": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/drawable/abc_item_background_holo_dark.xml"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_btn_default_mtrl_shape.xml"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
     },
     {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_icon_light.xml",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable/common_plus_signin_btn_icon_light.xml"
+    },
+    {
+<<<<<<< HEAD
         "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
         "source": "/Users/joshowsiany/.android/build-cache/e710e59d4d925699d6577d962a1cbf547e67a8a5/output/res/drawable/common_google_signin_btn_icon_dark.xml"
     },
@@ -134,12 +184,21 @@
     {
         "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_light.xml",
         "source": "/Users/joshowsiany/.android/build-cache/e710e59d4d925699d6577d962a1cbf547e67a8a5/output/res/drawable/common_plus_signin_btn_text_light.xml"
+=======
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_spinner_textfield_background_material.xml"
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
-        "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/drawable/abc_ratingbar_indicator_material.xml"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_dark.xml",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable/common_plus_signin_btn_text_dark.xml"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
     },
     {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+<<<<<<< HEAD
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
         "source": "/Users/Stephanie/.android/build-cache/fd013568b40d4efc306d463ed23382ae0198a220/output/res/drawable/abc_item_background_holo_light.xml"
     },
@@ -154,20 +213,29 @@
     {
         "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_light.xml",
         "source": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/drawable/abc_dialog_material_background_light.xml"
+=======
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light.xml",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable/common_google_signin_btn_text_light.xml"
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
-        "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/drawable/abc_dialog_material_background.xml"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_icon_dark.xml",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable/common_plus_signin_btn_icon_dark.xml"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_ic_go_search_api_material.xml",
-        "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/drawable/abc_ic_go_search_api_material.xml"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_light.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_dialog_material_background_light.xml"
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
-        "source": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/drawable/abc_tab_indicator_material.xml"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_cab_background_internal_bg.xml"
     },
     {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+<<<<<<< HEAD
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
         "source": "/Users/Stephanie/.android/build-cache/9d3c776a5a09e61504b49480a24777ac01b8b556/output/res/drawable/design_snackbar_background.xml"
     },
@@ -194,20 +262,29 @@
     {
         "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
         "source": "/Users/joshowsiany/.android/build-cache/e710e59d4d925699d6577d962a1cbf547e67a8a5/output/res/drawable/common_google_signin_btn_icon_light.xml"
+=======
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_dark.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_dialog_material_background_dark.xml"
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
-        "source": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/drawable/abc_edit_text_material.xml"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable/common_google_signin_btn_icon_light.xml"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
-        "source": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/drawable/abc_item_background_holo_light.xml"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_ic_menu_overflow_material.xml",
-        "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/drawable/abc_ic_menu_overflow_material.xml"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable/abc_btn_radio_material.xml"
     },
     {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable/common_google_signin_btn_icon_dark.xml"
+    },
+    {
+<<<<<<< HEAD
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
         "source": "/Users/Stephanie/.android/build-cache/fd013568b40d4efc306d463ed23382ae0198a220/output/res/drawable/abc_list_selector_holo_dark.xml"
     },
@@ -322,5 +399,9 @@
     {
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
         "source": "/Users/Stephanie/.android/build-cache/8edd04073ac7f86cc2b046b7a4909b45f1b002c3/output/res/drawable/common_google_signin_btn_icon_dark.xml"
+=======
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
+        "source": "/Users/Stephanie/.android/build-cache/d71aa8478d88867d95445bb7b2119d13a79b6365/output/res/drawable/design_snackbar_background.xml"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
     }
 ]

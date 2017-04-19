@@ -1,6 +1,7 @@
 [
     {
         "outputFile": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+<<<<<<< HEAD
         "map": [
             {
                 "to": {
@@ -141,6 +142,8 @@
     },
     {
         "outputFile": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+=======
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
         "map": [
             {
                 "to": {
@@ -151,7 +154,7 @@
                     "endOffset": 112
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-land/values-land.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-land/values-land.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -170,7 +173,7 @@
                     "endOffset": 184
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-land/values-land.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-land/values-land.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -189,7 +192,7 @@
                     "endOffset": 254
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-land/values-land.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-land/values-land.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -208,7 +211,7 @@
                     "endOffset": 318
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-land/values-land.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-land/values-land.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -227,7 +230,7 @@
                     "endOffset": 389
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-land/values-land.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-land/values-land.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -246,7 +249,7 @@
                     "endOffset": 457
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-land/values-land.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-land/values-land.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -266,7 +269,7 @@
                     "endOffset": 639
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/d0df6a355bae1679b808849216c42c2aea5dc514/output/res/values-land/values-land.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/d71aa8478d88867d95445bb7b2119d13a79b6365/output/res/values-land/values-land.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

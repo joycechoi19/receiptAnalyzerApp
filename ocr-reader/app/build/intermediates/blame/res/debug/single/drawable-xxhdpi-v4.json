@@ -1,6 +1,7 @@
 [
     {
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal.9.png",
+<<<<<<< HEAD
         "source": "/Users/Stephanie/.android/build-cache/8edd04073ac7f86cc2b046b7a4909b45f1b002c3/output/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal.9.png"
     },
     {
@@ -206,68 +207,104 @@
     {
         "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_light_focused.9.png",
         "source": "/Users/joshowsiany/.android/build-cache/e710e59d4d925699d6577d962a1cbf547e67a8a5/output/res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_focused.9.png"
-    },
-    {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
-        "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png",
-        "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/drawable-xxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
+=======
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal.9.png"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
     },
     {
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_text_dark_pressed.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_dark_pressed.9.png"
+    },
+    {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_icon_light_pressed.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_icon_light_pressed.9.png"
+    },
+    {
+<<<<<<< HEAD
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_text_dark_pressed.9.png",
         "source": "/Users/Stephanie/.android/build-cache/8edd04073ac7f86cc2b046b7a4909b45f1b002c3/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_dark_pressed.9.png"
+=======
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_disabled.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_disabled.9.png"
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
-        "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
-    },
-    {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_list_focused_holo.9.png",
-        "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/drawable-xxhdpi-v4/abc_list_focused_holo.9.png"
-    },
-    {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_icon_dark_pressed.9.png",
-        "source": "/Users/joshowsiany/.android/build-cache/e710e59d4d925699d6577d962a1cbf547e67a8a5/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_icon_dark_pressed.9.png"
-    },
-    {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_disabled.9.png",
-        "source": "/Users/joshowsiany/.android/build-cache/e710e59d4d925699d6577d962a1cbf547e67a8a5/output/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_disabled.9.png"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_light_disabled.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_disabled.9.png"
     },
     {
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_focused.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_focused.9.png"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
+    },
+    {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_light_focused.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_focused.9.png"
+    },
+    {
+<<<<<<< HEAD
+        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_list_focused_holo.9.png",
+        "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/drawable-xxhdpi-v4/abc_list_focused_holo.9.png"
+=======
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_light_pressed.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_pressed.9.png"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
+    },
+    {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_icon_dark_pressed.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_icon_dark_pressed.9.png"
+    },
+    {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_full_open_on_phone.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_full_open_on_phone.png"
+    },
+    {
+<<<<<<< HEAD
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_focused.9.png",
         "source": "/Users/Stephanie/.android/build-cache/8edd04073ac7f86cc2b046b7a4909b45f1b002c3/output/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_focused.9.png"
+=======
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_text_dark_disabled.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_dark_disabled.9.png"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_normal.9.png",
-        "source": "/Users/joshowsiany/.android/build-cache/e710e59d4d925699d6577d962a1cbf547e67a8a5/output/res/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_normal.9.png"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_disabled.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_disabled.9.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_light_pressed.9.png",
         "source": "/Users/Stephanie/.android/build-cache/8edd04073ac7f86cc2b046b7a4909b45f1b002c3/output/res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_pressed.9.png"
     },
     {
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_icon_dark_pressed.9.png",
         "source": "/Users/Stephanie/.android/build-cache/8edd04073ac7f86cc2b046b7a4909b45f1b002c3/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_icon_dark_pressed.9.png"
+=======
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_text_light_focused.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_light_focused.9.png"
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_text_dark_pressed.9.png",
-        "source": "/Users/joshowsiany/.android/build-cache/e710e59d4d925699d6577d962a1cbf547e67a8a5/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_dark_pressed.9.png"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_light_normal.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_normal.9.png"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_focused.9.png",
-        "source": "/Users/joshowsiany/.android/build-cache/e710e59d4d925699d6577d962a1cbf547e67a8a5/output/res/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_focused.9.png"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_ic_googleplayservices.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_ic_googleplayservices.png"
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_black_48dp.png",
-        "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/drawable-xxhdpi-v4/abc_ic_star_black_48dp.png"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_text_dark_normal.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_dark_normal.9.png"
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_icon_light_disabled.9.png",
-        "source": "/Users/joshowsiany/.android/build-cache/e710e59d4d925699d6577d962a1cbf547e67a8a5/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_icon_light_disabled.9.png"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_normal.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_normal.9.png"
     },
     {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_icon_dark_disabled.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_icon_dark_disabled.9.png"
+    },
+    {
+<<<<<<< HEAD
         "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_icon_dark_normal.9.png",
         "source": "/Users/joshowsiany/.android/build-cache/e710e59d4d925699d6577d962a1cbf547e67a8a5/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_icon_dark_normal.9.png"
     },
@@ -278,12 +315,45 @@
     {
         "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_text_light_normal.9.png",
         "source": "/Users/joshowsiany/.android/build-cache/e710e59d4d925699d6577d962a1cbf547e67a8a5/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_light_normal.9.png"
+=======
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_icon_light_disabled.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_icon_light_disabled.9.png"
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_light_normal.9.png",
-        "source": "/Users/joshowsiany/.android/build-cache/e710e59d4d925699d6577d962a1cbf547e67a8a5/output/res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_normal.9.png"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_icon_light_focused.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_icon_light_focused.9.png"
     },
     {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_disabled.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_disabled.9.png"
+    },
+    {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_text_light_disabled.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_light_disabled.9.png"
+    },
+    {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_icon_dark_focused.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_icon_dark_focused.9.png"
+    },
+    {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_icon_dark_normal.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_icon_dark_normal.9.png"
+    },
+    {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_pressed.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_pressed.9.png"
+    },
+    {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_text_light_pressed.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_light_pressed.9.png"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
+    },
+    {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_pressed.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_pressed.9.png"
+    },
+    {
+<<<<<<< HEAD
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_text_light_disabled.9.png",
         "source": "/Users/Stephanie/.android/build-cache/8edd04073ac7f86cc2b046b7a4909b45f1b002c3/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_light_disabled.9.png"
     },
@@ -294,28 +364,38 @@
     {
         "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png",
         "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png"
+=======
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_text_light_normal.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_light_normal.9.png"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",
-        "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/drawable-xxhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_focused.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_focused.9.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_pressed.9.png",
         "source": "/Users/Stephanie/.android/build-cache/8edd04073ac7f86cc2b046b7a4909b45f1b002c3/output/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_pressed.9.png"
     },
     {
         "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png",
         "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/drawable-xxhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
+=======
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_normal.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_normal.9.png"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_half_black_36dp.png",
-        "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/drawable-xxhdpi-v4/abc_ic_star_half_black_36dp.png"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_icon_light_normal.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_icon_light_normal.9.png"
     },
     {
-        "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png",
-        "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/drawable-xxhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png"
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_focused.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_focused.9.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",
         "source": "/Users/joshowsiany/.android/build-cache/d83444401cdf3e3bed92ed856497ee31a94f1c2a/output/res/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
     },
@@ -446,5 +526,13 @@
     {
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_text_dark_focused.9.png",
         "source": "/Users/Stephanie/.android/build-cache/8edd04073ac7f86cc2b046b7a4909b45f1b002c3/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_dark_focused.9.png"
+=======
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_plus_signin_btn_text_dark_focused.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_dark_focused.9.png"
+    },
+    {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_pressed.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/31ed79a432cf2effd1d0192266cc6bd57a831178/output/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_pressed.9.png"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
     }
 ]

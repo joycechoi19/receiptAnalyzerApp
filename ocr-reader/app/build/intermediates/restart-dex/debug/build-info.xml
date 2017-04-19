@@ -1,80 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="arm64-v8a,armeabi-v7a,armeabi"
+    abi="x86"
     api-level="25"
-    build-mode="COLD"
+    build-mode="FULL"
     density="420dpi"
     format="10"
     plugin-version="2.3.0"
-    timestamp="1491412720310"
-    token="6914083951677680941"
-    verifier="COLD_SWAP_REQUESTED" >
+    timestamp="1491922574889"
+    token="-8542708694802699905"
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1870" />
+        duration="1862" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="122" />
+        duration="1542" />
     <task
         name="verifier"
-        duration="10" />
+        duration="150" />
 
     <artifact
-        location="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-        type="SPLIT" />
+        location="/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1491412613412"
+        timestamp="1491922574889"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/outputs/apk/app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1491412720310"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
+            location="/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
     </build>
 
 </instant-run>

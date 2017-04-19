@@ -1,10 +1,14 @@
 [
     {
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+<<<<<<< HEAD
         "source": "/Users/Stephanie/.android/build-cache/9d3c776a5a09e61504b49480a24777ac01b8b556/output/res/layout-sw600dp/design_layout_snackbar.xml"
     },
     {
         "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
         "source": "/Users/joshowsiany/.android/build-cache/d0df6a355bae1679b808849216c42c2aea5dc514/output/res/layout-sw600dp/design_layout_snackbar.xml"
+=======
+        "source": "/Users/Stephanie/.android/build-cache/d71aa8478d88867d95445bb7b2119d13a79b6365/output/res/layout-sw600dp/design_layout_snackbar.xml"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
     }
 ]

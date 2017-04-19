@@ -1,6 +1,7 @@
 [
     {
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+<<<<<<< HEAD
         "source": "/Users/Stephanie/.android/build-cache/fd013568b40d4efc306d463ed23382ae0198a220/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
     },
     {
@@ -18,5 +19,12 @@
     {
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
         "source": "/Users/Stephanie/.android/build-cache/fd013568b40d4efc306d463ed23382ae0198a220/output/res/drawable-v21/abc_btn_colored_material.xml"
+=======
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable-v21/abc_btn_colored_material.xml"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
     }
 ]

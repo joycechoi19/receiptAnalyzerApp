@@ -1,6 +1,7 @@
 [
     {
         "outputFile": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml",
+<<<<<<< HEAD
         "map": [
             {
                 "to": {
@@ -86,6 +87,8 @@
     },
     {
         "outputFile": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml",
+=======
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
         "map": [
             {
                 "to": {
@@ -96,7 +99,7 @@
                     "endOffset": 125
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v22/values-v22.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v22/values-v22.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -115,7 +118,7 @@
                     "endOffset": 212
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v22/values-v22.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v22/values-v22.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -135,7 +138,7 @@
                     "endOffset": 393
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v22/values-v22.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v22/values-v22.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -156,7 +159,7 @@
                     "endOffset": 586
                 },
                 "from": {
-                    "file": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/values-v22/values-v22.xml",
+                    "file": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/values-v22/values-v22.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,

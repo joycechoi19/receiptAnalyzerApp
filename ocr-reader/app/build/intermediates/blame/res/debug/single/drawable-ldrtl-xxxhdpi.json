@@ -1,6 +1,7 @@
 [
     {
         "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi/abc_ic_ab_back_mtrl_am_alpha.png",
+<<<<<<< HEAD
         "source": "/Users/Stephanie/.android/build-cache/fd013568b40d4efc306d463ed23382ae0198a220/output/res/drawable-ldrtl-xxxhdpi/abc_ic_ab_back_mtrl_am_alpha.png"
     },
     {
@@ -30,5 +31,20 @@
     {
         "merged": "/Users/joshowsiany/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi/abc_ic_ab_back_mtrl_am_alpha.png",
         "source": "/Users/joshowsiany/.android/build-cache/66b7bdd05d863d3507ae48f9fb9591b5485cbae9/output/res/drawable-ldrtl-xxxhdpi/abc_ic_ab_back_mtrl_am_alpha.png"
+=======
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable-ldrtl-xxxhdpi/abc_ic_ab_back_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable-ldrtl-xxxhdpi/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi/abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable-ldrtl-xxxhdpi/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/Stephanie/AndroidStudioProjects/receiptAnalyzerApp/ocr-reader/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi/abc_spinner_mtrl_am_alpha.9.png",
+        "source": "/Users/Stephanie/.android/build-cache/50c485a115e89d3d318db0bf807ea39c5aba6520/output/res/drawable-ldrtl-xxxhdpi/abc_spinner_mtrl_am_alpha.9.png"
+>>>>>>> 54cf6fd414e2df0410d2e4ecad35caab7f550804
     }
 ]
