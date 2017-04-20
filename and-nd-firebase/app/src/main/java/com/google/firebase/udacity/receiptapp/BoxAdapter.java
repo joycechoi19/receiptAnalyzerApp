@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 
 /**
@@ -17,19 +18,26 @@ import java.util.ArrayList;
 
 class BoxAdapter extends RecyclerView.Adapter<BoxAdapter.ViewHolder> {
     private ArrayList<Receipt> mReceiptList;
+    private NumberFormat mCurFormat;
 
-    // Provide a reference to the views for each data item
-    // Complex data items may need more than one view per item, and
-    // you provide access to all the views for a data item in a view holder
+
+    /**
+     * The ViewHolder provides a refernce to the views for each
+     * data item (in our case, a CardView).
+     */
     static class ViewHolder extends RecyclerView.ViewHolder {
         //        private CardView mCardView;
         private TextView mStoreView;
         private TextView mAmountView;
         private TextView mDateView;
 
+        /**
+         * Constructor for ViewHolder provides reference to
+         * all the component views
+         * @param v  Overarching view for item (cardview)
+         */
         ViewHolder(View v) {
             super(v);
-//            mCardView = (CardView) v.findViewById(R.id.view_card_receipt);
             mStoreView = (TextView) v.findViewById(R.id.text_receipt_store);
             mAmountView = (TextView) v.findViewById(R.id.text_receipt_amount);
             mDateView = (TextView) v.findViewById(R.id.text_receipt_date);
@@ -43,12 +51,24 @@ class BoxAdapter extends RecyclerView.Adapter<BoxAdapter.ViewHolder> {
         notifyItemInserted(position);
     }
 
-    // constructor
+    /**
+     * Constructor for adapter instantiates a currency formatter
+     * and a reference to the list of items used to create the
+     * list of cardviews.
+     * @param myReceiptList  ArrayList of items to be presented in the view
+     */
     BoxAdapter(ArrayList<Receipt> myReceiptList) {
+        mCurFormat = NumberFormat.getCurrencyInstance();
         mReceiptList = myReceiptList;
     }
 
-    // Create new views (invoked by the layout manager)
+
+    /**
+     * Creates new Views (invoked by the layout manager)
+     * @param parent     The parent view container
+     * @param viewType
+     * @return ViewHolder for use by the adapter
+     */
     @Override
     public BoxAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                     int viewType) {
@@ -60,17 +80,26 @@ class BoxAdapter extends RecyclerView.Adapter<BoxAdapter.ViewHolder> {
         return vh;
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
+
+    /**
+     * Replaces the contents of a view (invoked by the layout manager)
+     * @param holder     ViewHolder created from above method
+     * @param position   position in the list of views
+     */
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
+        String currency = mCurFormat.format(mReceiptList.get(position).mAmount);
         holder.mStoreView.setText(mReceiptList.get(position).mStore);
-        holder.mAmountView.setText(Double.toString(mReceiptList.get(position).mAmount));
+        holder.mAmountView.setText(currency);
         holder.mDateView.setText(mReceiptList.get(position).mDate);
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
+    /**
+     * Returns the size of the dataset (invoked by layout manager)
+     * @return integer size
+     */
     @Override
     public int getItemCount() {
         return mReceiptList.size();
