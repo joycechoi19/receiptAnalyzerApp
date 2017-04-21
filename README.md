@@ -16,4 +16,4 @@ Our app aims to do 2 things:
 * **Stephanie**
 * **Joyce**
   * ~~Created user registration, login, and logout using Firebase.~~
-  * Will help Helen with pulling receipt information from database to display on receipt info page in CardView
+  * Will start working on Maps integration
