@@ -35,15 +35,19 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     // for icons
-    compile 'com.joanzapata.iconify:android-iconify-material:2.2.2' // (v2.0.0)
-    compile 'com.joanzapata.iconify:android-iconify-material-community:2.2.2' // (v1.4.57)
+    // (v2.0.0)
+    // (v1.4.57)
     // Displaying images
+    // support for OCR reader
+    compile 'com.joanzapata.iconify:android-iconify-material:2.2.2'
+    compile 'com.joanzapata.iconify:android-iconify-material-community:2.2.2'
     compile 'com.android.support:design:24.2.0'
     compile 'com.android.support:appcompat-v7:24.2.0'
     compile 'com.github.bumptech.glide:glide:3.6.1'
-    compile 'com.google.firebase:firebase-auth:10.2.1'
+    compile 'com.google.firebase:firebase-auth:10.2.0'
     compile 'com.firebaseui:firebase-ui-auth:1.2.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.android.gms:play-services-vision:10.2.0'
     testCompile 'junit:junit:4.12'
 }
 
@@ -53,6 +57,8 @@ allprojects {
         maven { url 'https://maven.fabric.io/public' }
     }
 }
+
+
 
 
 apply plugin: 'com.google.gms.google-services'

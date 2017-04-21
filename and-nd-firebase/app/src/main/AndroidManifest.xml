@@ -3,10 +3,10 @@
     package="com.google.firebase.udacity.receiptapp">
 
     <application
+        android:name=".ReceiptAnalyze"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name=".ReceiptAnalyze"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".MainActivity">
@@ -17,6 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".BoxActivity" />
+        <activity android:name=".InfoEditorActivity" />
+        <activity android:name=".OcrCaptureActivity"></activity>
     </application>
 
 </manifest>
