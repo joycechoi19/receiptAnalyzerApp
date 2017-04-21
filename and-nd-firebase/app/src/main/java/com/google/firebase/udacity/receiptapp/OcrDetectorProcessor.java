@@ -18,7 +18,7 @@ package com.google.firebase.udacity.receiptapp;
 
 import android.util.SparseArray;
 import java.util.ArrayList;
-import com.google.android.gms.samples.vision.ocrreader.ui.camera.GraphicOverlay;
+import com.google.firebase.udacity.receiptapp.ui.camera.GraphicOverlay;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.text.TextBlock;
 

@@ -91,7 +91,7 @@ implements BoxAdapter.OnChoiceSelectedListener {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.action_add_receipt:
-                // TODO: add receipt by calling the receipt scanning activity idk
+                setContentView(R.layout.preread_activity);
                 return true;
             case R.id.action_sign_out:
                 // TODO: sign out of firebase here

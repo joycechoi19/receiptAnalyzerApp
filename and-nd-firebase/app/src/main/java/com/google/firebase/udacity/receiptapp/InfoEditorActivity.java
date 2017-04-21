@@ -10,7 +10,7 @@ public class InfoEditorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.checker);
+        setContentView(R.layout.activity_info_editor);
     }
 
 //    public ArrayList<String> getReceipt(ArrayList<String> receipt){
