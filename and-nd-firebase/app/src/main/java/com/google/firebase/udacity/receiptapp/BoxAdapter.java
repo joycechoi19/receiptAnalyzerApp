@@ -1,6 +1,5 @@
 package com.google.firebase.udacity.receiptapp;
 
-import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;

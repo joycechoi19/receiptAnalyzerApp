@@ -2,9 +2,9 @@
 <set xmlns:android="http://schemas.android.com/apk/res/android"
     android:fillAfter="true">
     <objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
-        android:propertyName="y"
+        android:propertyName="translationY"
         android:valueType="floatType"
-        android:valueFrom="-1280"
+        android:valueFrom="1280"
         android:valueTo="0"
         android:duration="500"/>
 </set>
