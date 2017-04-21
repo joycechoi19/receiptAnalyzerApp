@@ -3,4 +3,7 @@
     <string name="action_add_receipt">Add Receipt</string>
     <string name="action_sign_out">Sign Out</string>
     <string name="send_button_label">Send</string>
+    <string name="text_receipt_amount">00.00</string>
+    <string name="text_receipt_date">NO DATE AVAILABLE</string>
+    <string name="text_receipt_store">STORE NAME</string>
 </resources>

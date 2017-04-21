@@ -4,6 +4,7 @@ package com.google.firebase.udacity.receiptapp;
  * Created by helen on 4/13/17.
  */
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,14 +18,14 @@ import java.util.Map;
  * safely stored in Firebase database.
  */
 
-class Receipt {
+class Receipt implements Serializable {
 
-    public String mDate;
-    public String mStore;
-    public String mAddr;
-    public Double mAmount;
+    private String mDate;
+    private String mStore;
+    private String mAddr;
+    private Double mAmount;
 
-    public Receipt() {
+    Receipt() {
         // Default constructor required for calls to DataSnapshot.getValue(Receipt.class);
     }
 
@@ -36,7 +37,7 @@ class Receipt {
      * @param store   Store name
      * @param amount  Amount of money spent
      */
-    public Receipt(String date, String store, Double amount) {
+    Receipt(String date, String store, Double amount) {
         this(date, store, "na", amount);
     }
 
@@ -47,7 +48,7 @@ class Receipt {
      * @param addr    Store address
      * @param amount  Amount of money spent
      */
-    public Receipt(String date, String store, String addr, Double amount) {
+    Receipt(String date, String store, String addr, Double amount) {
         this.mDate = date;
         this.mStore = store;
         this.mAddr = addr;
@@ -67,5 +68,26 @@ class Receipt {
         ret.put("addr", mAddr);
         ret.put("amount", mAmount);
         return ret;
+    }
+
+    /**
+     * @return store of purchase
+     */
+    public String getStore() {
+        return mStore;
+    }
+
+    /**
+     * @return date of purchase
+     */
+    public String getDate() {
+        return mDate;
+    }
+
+    /**
+     * @return total of purchase
+     */
+    public Double getAmount() {
+        return mAmount;
     }
 }

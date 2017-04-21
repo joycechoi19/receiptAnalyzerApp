@@ -1,6 +1,7 @@
 package com.google.firebase.udacity.receiptapp;
 
 import android.app.Application;
+import android.icu.text.NumberFormat;
 
 import com.joanzapata.iconify.Iconify;
 import com.joanzapata.iconify.fonts.MaterialModule;

@@ -1,10 +1,12 @@
 package com.google.firebase.udacity.receiptapp;
 
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -21,10 +23,20 @@ import java.util.ArrayList;
  * from Firebase and displays in a grid list.
  */
 
-public class BoxActivity extends AppCompatActivity {
+public class BoxActivity extends AppCompatActivity
+implements BoxAdapter.OnChoiceSelectedListener {
+
+    private static final String TAG = "BoxActivity";
+    static final String sRECEIPT = "com.google.firebase.udacity.receiptapp.BoxActivity.sRECEIPT";
 
     private ArrayList<Receipt> mReceiptList;
 
+    /**
+     * On creation of the activity, we set up the toolbar and
+     * fetch the logged in user's data from the database in order
+     * to initialize a RecyclerView for the receipts.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,10 +54,13 @@ public class BoxActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
-        RecyclerView.Adapter mAdapter = new BoxAdapter(mReceiptList);
+        RecyclerView.Adapter mAdapter = new BoxAdapter(this, mReceiptList);
         mRecyclerView.setAdapter(mAdapter);
     }
 
+    /**
+     * Starts activity.
+     */
     @Override
     protected void onStart() {
         super.onStart();
@@ -97,5 +112,23 @@ public class BoxActivity extends AppCompatActivity {
         ret.add(new Receipt("07-09-2016", "HOME DEPOT", 9.97));
         ret.add(new Receipt("09-09-1999", "SCRIVENSHAFT'S QUILL SHOP", 124.02));
         return ret;
+    }
+
+    /**
+     * Using the index of the selected cardView passed from
+     * BoxAdapter, this method creates and populates a fragment
+     * for a detailed view of the receipt stored at the index
+     * @param index location of selected item in receipt list
+     */
+    @Override
+    public void onChoiceSelected(int index) {
+        FragmentTransaction fragTransaction = getFragmentManager().beginTransaction();
+        fragTransaction.setCustomAnimations(R.animator.anim_slide_up, R.animator.anim_slide_down);
+        ReceiptFragment mFragment = new ReceiptFragment();
+        Bundle args = new Bundle();
+        Receipt receipt = mReceiptList.get(index);
+        args.putSerializable(sRECEIPT, receipt);
+        mFragment.setArguments(args);
+        fragTransaction.add(R.id.container_fragment_receipt, mFragment).commit();
     }
 }

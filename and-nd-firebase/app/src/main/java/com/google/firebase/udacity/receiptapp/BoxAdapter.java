@@ -1,7 +1,9 @@
 package com.google.firebase.udacity.receiptapp;
 
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,16 +19,23 @@ import java.util.ArrayList;
  */
 
 class BoxAdapter extends RecyclerView.Adapter<BoxAdapter.ViewHolder> {
+    private static final String TAG = "BoxAdapter";
+
     private ArrayList<Receipt> mReceiptList;
     private NumberFormat mCurFormat;
 
+    private OnChoiceSelectedListener mCallBack;
+
+    interface OnChoiceSelectedListener {
+        void onChoiceSelected(int index);
+    }
 
     /**
      * The ViewHolder provides a refernce to the views for each
      * data item (in our case, a CardView).
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
-        //        private CardView mCardView;
+        private CardView mCardView;
         private TextView mStoreView;
         private TextView mAmountView;
         private TextView mDateView;
@@ -38,6 +47,7 @@ class BoxAdapter extends RecyclerView.Adapter<BoxAdapter.ViewHolder> {
          */
         ViewHolder(View v) {
             super(v);
+            mCardView = (CardView) v.findViewById(R.id.view_card_receipt);
             mStoreView = (TextView) v.findViewById(R.id.text_receipt_store);
             mAmountView = (TextView) v.findViewById(R.id.text_receipt_amount);
             mDateView = (TextView) v.findViewById(R.id.text_receipt_date);
@@ -57,7 +67,8 @@ class BoxAdapter extends RecyclerView.Adapter<BoxAdapter.ViewHolder> {
      * list of cardviews.
      * @param myReceiptList  ArrayList of items to be presented in the view
      */
-    BoxAdapter(ArrayList<Receipt> myReceiptList) {
+    BoxAdapter(OnChoiceSelectedListener callback, ArrayList<Receipt> myReceiptList) {
+        mCallBack = callback;
         mCurFormat = NumberFormat.getCurrencyInstance();
         mReceiptList = myReceiptList;
     }
@@ -82,18 +93,29 @@ class BoxAdapter extends RecyclerView.Adapter<BoxAdapter.ViewHolder> {
 
 
     /**
-     * Replaces the contents of a view (invoked by the layout manager)
+     * Replaces the contents of a view (invoked by the layout manager) by
+     * getting element from dataset at given position and replacing contents
+     * of the viewholder with that element.
      * @param holder     ViewHolder created from above method
      * @param position   position in the list of views
      */
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        // - get element from your dataset at this position
-        // - replace the contents of the view with that element
-        String currency = mCurFormat.format(mReceiptList.get(position).mAmount);
-        holder.mStoreView.setText(mReceiptList.get(position).mStore);
+        final int idx = position;
+        // usage of textformatter ensures that money is displayed
+        // in the phone's desired locale
+        String currency = mCurFormat.format(mReceiptList.get(position).getAmount());
+        holder.mStoreView.setText(mReceiptList.get(position).getStore());
         holder.mAmountView.setText(currency);
-        holder.mDateView.setText(mReceiptList.get(position).mDate);
+        holder.mDateView.setText(mReceiptList.get(position).getDate());
+        // onClickListener calls detailed receipt view (fragment)
+        holder.mCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "position of item selected is: " + idx);
+                mCallBack.onChoiceSelected(idx);
+            }
+        });
     }
 
     /**

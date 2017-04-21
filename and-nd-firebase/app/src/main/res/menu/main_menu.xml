@@ -6,7 +6,7 @@ android:id="@+id/menu_actions">
     <item
         android:id="@+id/action_add_receipt"
         android:title="@string/action_add_receipt"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="always"/>
     <item
         android:id="@+id/action_sign_out"
         android:title="@string/action_sign_out"
