@@ -2,8 +2,8 @@
 This Android application was built for Duke's CS290.3 Mobile Software Development course. The website for this project is available [HERE](https://joycechoi19.github.io/receiptAnalyzerWebsite/). 
 
 Our app aims to do 2 things:
-1) Make your paper receipt electronic by simply taking a photo and storing all of them in a easy to navigate UI 
-2) Use image-to-text conversion to make receipts searchable by store name, purchase date, or amount spent
+1. Make your paper receipts electronic by simply taking a photo and storing all of them in a easy to navigate UI 
+2. Use image-to-text conversion to make receipts searchable by store name, purchase date, or amount spent
 
 ## Progress
 ### Work that has been done (Alpha):
