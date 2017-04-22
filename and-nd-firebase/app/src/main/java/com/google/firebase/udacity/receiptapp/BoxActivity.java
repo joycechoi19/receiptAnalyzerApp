@@ -1,6 +1,7 @@
 package com.google.firebase.udacity.receiptapp;
 
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -91,7 +92,9 @@ implements BoxAdapter.OnChoiceSelectedListener {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.action_add_receipt:
-                setContentView(R.layout.preread_activity);
+                Intent i = new Intent(this,
+                        PreReaderActivity.class);
+                startActivity(i);
                 return true;
             case R.id.action_sign_out:
                 // TODO: sign out of firebase here

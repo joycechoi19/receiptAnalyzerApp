@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:keepScreenOn="true">
 
+
     <Button
         android:id="@+id/button_done"
         android:layout_width="wrap_content"
@@ -16,17 +17,17 @@
         android:onClick="onButtonClick"
         android:text="Done" />
 
-    <com.google.android.gms.samples.vision.ocrreader.ui.camera.CameraSourcePreview
+    <com.google.firebase.udacity.receiptapp.ui.camera.CameraSourcePreview
         android:id="@+id/preview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.gms.samples.vision.ocrreader.ui.camera.GraphicOverlay
+        <com.google.firebase.udacity.receiptapp.ui.camera.GraphicOverlay
             android:id="@+id/graphicOverlay"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-    </com.google.android.gms.samples.vision.ocrreader.ui.camera.CameraSourcePreview>
+    </com.google.firebase.udacity.receiptapp.ui.camera.CameraSourcePreview>
 
 
 </LinearLayout>

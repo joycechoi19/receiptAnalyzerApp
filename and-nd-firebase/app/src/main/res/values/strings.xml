@@ -22,4 +22,6 @@
     <string name="address_header">"Address:"</string>
     <string name="total_cost_header">"Total Cost:"</string>
     <string name="test"> OcrCaptureActivity.info.get(0)</string>
+    <string name="save"> Save Receipt </string>
+
 </resources>
