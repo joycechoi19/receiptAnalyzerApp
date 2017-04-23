@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         // Enable Send button when there's text to send
         mMessageEditText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -159,6 +160,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivityForResult(
                             AuthUI.getInstance()
                                     .createSignInIntentBuilder()
+                                    .setTheme(R.style.FirebaseLoginTheme)
+                                    .setLogo(R.drawable.logo)
                                     .setIsSmartLockEnabled(false)
                                     .setProviders(
                                             AuthUI.EMAIL_PROVIDER)
