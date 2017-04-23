@@ -18,7 +18,7 @@ import java.util.Map;
  * safely stored in Firebase database.
  */
 
-class Receipt implements Serializable {
+public class Receipt implements Serializable {
 
     private String mDate;
     private String mStore;

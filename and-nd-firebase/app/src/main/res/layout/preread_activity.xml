@@ -34,6 +34,7 @@
         android:layout_height="wrap_content"
         android:text="@string/read_text"
         android:id="@+id/read_text"
+        android:onClick="onClick"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 

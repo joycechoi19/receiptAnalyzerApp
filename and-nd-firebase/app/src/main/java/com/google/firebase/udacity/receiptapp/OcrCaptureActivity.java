@@ -39,6 +39,7 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -54,6 +55,8 @@ import com.google.android.gms.vision.text.TextRecognizer;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Locale;
+
+import static android.R.attr.id;
 
 
 /**
@@ -345,10 +348,6 @@ public final class OcrCaptureActivity extends AppCompatActivity {
      * @param rawY - the raw position of the tap.
      * @return true if the activity is ending.
      */
-    public ArrayList<String> getReceipt(ArrayList<String> info){
-        info = receipt;
-        return info;
-    }
 
     private boolean onTap(float rawX, float rawY) {
         OcrGraphic graphic = mGraphicOverlay.getGraphicAtLocation(rawX, rawY);
@@ -445,5 +444,19 @@ public final class OcrCaptureActivity extends AppCompatActivity {
 //                InfoEditorActivity.class);
 //        startActivity(i);
         setContentView(R.layout.activity_info_editor);
+    }
+    public void onClicker(View v){
+        Intent i = new Intent(OcrCaptureActivity.this,
+                //need to name class below
+                MainActivity.class);
+        startActivity(i);
+    }
+    
+    public void setText(ArrayList<String> rec){
+        rec = receipt;
+        String hi = "hello";
+        EditText storeName=(EditText)findViewById(R.id.store_name);
+        storeName.setText(hi);
+
     }
 }

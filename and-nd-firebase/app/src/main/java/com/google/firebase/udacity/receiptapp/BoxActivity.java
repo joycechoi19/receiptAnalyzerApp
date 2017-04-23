@@ -1,19 +1,31 @@
 package com.google.firebase.udacity.receiptapp;
 
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.joanzapata.iconify.IconDrawable;
 import com.joanzapata.iconify.fonts.MaterialIcons;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  * Displays all receipts scanned and saved using CardView.
@@ -26,9 +38,15 @@ public class BoxActivity extends AppCompatActivity
 implements BoxAdapter.OnChoiceSelectedListener {
 
     private static final String TAG = "BoxActivity";
+    private static final String sRECEIPTS = "receipts";
+    private static final String sUSERS = "users";
     static final String sRECEIPT = "com.google.firebase.udacity.receiptapp.BoxActivity.sRECEIPT";
 
     private ArrayList<Receipt> mReceiptList;
+    private DatabaseReference mDatabase;
+    private FirebaseAuth mFirebaseAuth;
+    private FirebaseUser mFirebaseUser;
+    private String mUserID;
 
     /**
      * On creation of the activity, we set up the toolbar and
@@ -46,15 +64,60 @@ implements BoxAdapter.OnChoiceSelectedListener {
         setSupportActionBar(mToolBar);
 
         // BEGIN TODO: replace with database invocation
-        mReceiptList = createDummy();
+//        mReceiptList = createDummy();
 
-        // initialize recyclerview for receipts
-        RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.view_recycler_box);
-        mRecyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(mLayoutManager);
-        RecyclerView.Adapter mAdapter = new BoxAdapter(this, mReceiptList);
-        mRecyclerView.setAdapter(mAdapter);
+        // initialize Firebase references
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        mFirebaseUser = mFirebaseAuth.getCurrentUser();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        if (mFirebaseUser == null) {
+            // user not logged in
+            // redirect to main screen
+            startActivity(new Intent(this, MainActivity.class));
+        } else {
+            mReceiptList = new ArrayList<>();
+            mUserID = mFirebaseUser.getUid();
+            mDatabase.child(sUSERS).child(mUserID).child(sRECEIPTS)
+                    .addChildEventListener(new ChildEventListener() {
+                @Override
+                public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                    for (DataSnapshot snap: dataSnapshot.getChildren()) {
+                        Receipt receipt = snap.getValue(Receipt.class);
+                        mReceiptList.add(receipt);
+                    }
+                }
+
+                @Override
+                public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+                }
+
+                @Override
+                public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+                }
+
+                @Override
+                public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                    // Failed to read value
+                    Log.d(TAG, "Database data retrieval failed.", databaseError.toException());
+                }
+            });
+
+            // initialize recyclerview for receipts
+            RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.view_recycler_box);
+            mRecyclerView.setHasFixedSize(true);
+            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
+            mRecyclerView.setLayoutManager(mLayoutManager);
+            RecyclerView.Adapter mAdapter = new BoxAdapter(this, mReceiptList);
+            mRecyclerView.setAdapter(mAdapter);
+        }
     }
 
     /**
@@ -91,7 +154,9 @@ implements BoxAdapter.OnChoiceSelectedListener {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.action_add_receipt:
-                setContentView(R.layout.preread_activity);
+                Intent i = new Intent(this,
+                        PreReaderActivity.class);
+                startActivity(i);
                 return true;
             case R.id.action_sign_out:
                 // TODO: sign out of firebase here
@@ -111,6 +176,23 @@ implements BoxAdapter.OnChoiceSelectedListener {
         ret.add(new Receipt("07-09-2016", "HOME DEPOT", 9.97));
         ret.add(new Receipt("09-09-1999", "SCRIVENSHAFT'S QUILL SHOP", 124.02));
         return ret;
+    }
+    /**
+     * TODO: remove this method at submission
+     */
+    private void saveDummy() {
+        String key = mDatabase.child(sUSERS).child(mUserID).child(sRECEIPTS)
+                .push().getKey();
+        String path = "/" + sUSERS + "/" + mUserID + "/" + sRECEIPTS + "/";
+        Map<String, Object> childUpdates = new HashMap<>();
+        ArrayList<Receipt> temp = createDummy();
+        Iterator<Receipt> iterator = temp.iterator();
+        while(iterator.hasNext()) {
+            Receipt r = iterator.next();
+            Map<String, Object> tempReceipt = r.toMap();
+            childUpdates.put(path + key, tempReceipt);
+        }
+        mDatabase.updateChildren(childUpdates);
     }
 
     /**

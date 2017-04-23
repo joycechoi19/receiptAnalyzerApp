@@ -40,7 +40,7 @@ public class PreReaderActivity extends Activity implements View.OnClickListener 
     private TextView textValue;
 
     private static final int RC_OCR_CAPTURE = 9003;
-    private static final String TAG = "preread_activity";
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,9 +69,10 @@ public class PreReaderActivity extends Activity implements View.OnClickListener 
             intent.putExtra(OcrCaptureActivity.AutoFocus, autoFocus.isChecked());
             intent.putExtra(OcrCaptureActivity.UseFlash, useFlash.isChecked());
             Log.d(TAG, "clicked button");
-
-            startActivityForResult(intent, RC_OCR_CAPTURE);
+            startActivity(intent);
+//            startActivityForResult(intent, RC_OCR_CAPTURE);
         }
+        Log.d(TAG, "outside button");
     }
 
     /**
