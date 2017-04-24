@@ -72,6 +72,10 @@ public final class OcrCaptureActivity extends AppCompatActivity {
 
     //Make arraylist for receipt items
     public ArrayList<String> receipt = new ArrayList<>();
+    static EditText storeName;
+    static EditText storeAddress;
+    static EditText totalCost;
+    static String cost = "hello";
 
     // Permission request codes need to be < 256
     private static final int RC_HANDLE_CAMERA_PERM = 2;
@@ -119,7 +123,6 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         Snackbar.make(mGraphicOverlay, "Tap the store name, then address, then total price!",
                 Snackbar.LENGTH_LONG)
                 .show();
-        // TODO: Set up the Text To Speech engine.
 
 
         TextToSpeech.OnInitListener listener =
@@ -443,7 +446,47 @@ public final class OcrCaptureActivity extends AppCompatActivity {
 //                //need to name class below
 //                InfoEditorActivity.class);
 //        startActivity(i);
+// NOTE if running on emulator, will not work when click "done" b/c receipt arraylist is empty
+        //Should add a try/catch?
+        //also toast for on tap
         setContentView(R.layout.activity_info_editor);
+        if(receipt.size() == 0){
+            storeName = (EditText) findViewById(R.id.store_name);
+            storeName.setText("No Store Selected!");
+
+            storeAddress = (EditText) findViewById(R.id.store_address);
+            storeAddress.setText("No Address Selected!");
+
+            totalCost = (EditText)findViewById(R.id.total_cost);
+            totalCost.setText("No Cost Selected!");
+        }else if(receipt.size() == 1) {
+            storeName = (EditText) findViewById(R.id.store_name);
+            storeName.setText(receipt.get(0));
+
+            storeAddress = (EditText) findViewById(R.id.store_address);
+            storeAddress.setText("No Address Selected!");
+
+            totalCost = (EditText)findViewById(R.id.total_cost);
+            totalCost.setText("No Cost Selected!");
+        }else if(receipt.size() == 2) {
+            storeName = (EditText) findViewById(R.id.store_name);
+            storeName.setText(receipt.get(0));
+
+            storeAddress = (EditText) findViewById(R.id.store_address);
+            storeAddress.setText(receipt.get(1));
+
+            totalCost = (EditText)findViewById(R.id.total_cost);
+            totalCost.setText("No Cost Selected!");
+        }else{
+            storeName = (EditText) findViewById(R.id.store_name);
+            storeName.setText(receipt.get(0));
+
+            storeAddress = (EditText) findViewById(R.id.store_address);
+            storeAddress.setText(receipt.get(1));
+
+            totalCost = (EditText) findViewById(R.id.total_cost);
+            totalCost.setText(receipt.get(2));
+        }
     }
     public void onClicker(View v){
         Intent i = new Intent(OcrCaptureActivity.this,
@@ -451,12 +494,5 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                 MainActivity.class);
         startActivity(i);
     }
-    
-    public void setText(ArrayList<String> rec){
-        rec = receipt;
-        String hi = "hello";
-        EditText storeName=(EditText)findViewById(R.id.store_name);
-        storeName.setText(hi);
 
-    }
 }
