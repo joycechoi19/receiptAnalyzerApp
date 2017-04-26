@@ -72,10 +72,12 @@ public final class OcrCaptureActivity extends AppCompatActivity {
 
     //Make arraylist for receipt items
     public ArrayList<String> receipt = new ArrayList<>();
+    public ArrayList<String> receiptFinal = new ArrayList<>();
     static EditText storeName;
+    static EditText storeDate;
     static EditText storeAddress;
     static EditText totalCost;
-    static String cost = "hello";
+
 
     // Permission request codes need to be < 256
     private static final int RC_HANDLE_CAMERA_PERM = 2;
@@ -120,9 +122,9 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         gestureDetector = new GestureDetector(this, new CaptureGestureListener());
         scaleGestureDetector = new ScaleGestureDetector(this, new ScaleListener());
 
-        Snackbar.make(mGraphicOverlay, "Tap the store name, then address, then total price!",
-                Snackbar.LENGTH_LONG)
-                .show();
+//        Snackbar.make(mGraphicOverlay, "Tap the store name, then address, then total price!",
+//                Snackbar.LENGTH_LONG)
+//                .show();
 
 
         TextToSpeech.OnInitListener listener =
@@ -442,17 +444,14 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         }
     }
     public void onButtonClick(View v){
-//        Intent i = new Intent(OcrCaptureActivity.this,
-//                //need to name class below
-//                InfoEditorActivity.class);
-//        startActivity(i);
-// NOTE if running on emulator, will not work when click "done" b/c receipt arraylist is empty
-        //Should add a try/catch?
-        //also toast for on tap
+
         setContentView(R.layout.activity_info_editor);
         if(receipt.size() == 0){
             storeName = (EditText) findViewById(R.id.store_name);
             storeName.setText("No Store Selected!");
+
+            storeDate = (EditText) findViewById(R.id.store_date);
+            storeDate.setText("No Date Selected!");
 
             storeAddress = (EditText) findViewById(R.id.store_address);
             storeAddress.setText("No Address Selected!");
@@ -463,6 +462,9 @@ public final class OcrCaptureActivity extends AppCompatActivity {
             storeName = (EditText) findViewById(R.id.store_name);
             storeName.setText(receipt.get(0));
 
+            storeDate = (EditText) findViewById(R.id.store_date);
+            storeDate.setText("No Date Selected!");
+
             storeAddress = (EditText) findViewById(R.id.store_address);
             storeAddress.setText("No Address Selected!");
 
@@ -472,27 +474,58 @@ public final class OcrCaptureActivity extends AppCompatActivity {
             storeName = (EditText) findViewById(R.id.store_name);
             storeName.setText(receipt.get(0));
 
+            storeDate = (EditText) findViewById(R.id.store_date);
+            storeDate.setText(receipt.get(1));
+
             storeAddress = (EditText) findViewById(R.id.store_address);
-            storeAddress.setText(receipt.get(1));
+            storeAddress.setText("No Address Selected!");
 
             totalCost = (EditText)findViewById(R.id.total_cost);
             totalCost.setText("No Cost Selected!");
+
+        }else if(receipt.size() ==3){
+            storeName = (EditText) findViewById(R.id.store_name);
+            storeName.setText(receipt.get(0));
+
+            storeDate = (EditText) findViewById(R.id.store_date);
+            storeDate.setText(receipt.get(1));
+
+            storeAddress = (EditText) findViewById(R.id.store_address);
+            storeAddress.setText(receipt.get(2));
+
+            totalCost = (EditText)findViewById(R.id.total_cost);
+            totalCost.setText("No Cost Selected!");
+
         }else{
             storeName = (EditText) findViewById(R.id.store_name);
             storeName.setText(receipt.get(0));
 
+            storeDate = (EditText) findViewById(R.id.store_date);
+            storeDate.setText(receipt.get(1));
+
             storeAddress = (EditText) findViewById(R.id.store_address);
-            storeAddress.setText(receipt.get(1));
+            storeAddress.setText(receipt.get(2));
 
             totalCost = (EditText) findViewById(R.id.total_cost);
-            totalCost.setText(receipt.get(2));
+            totalCost.setText(receipt.get(3));
         }
     }
     public void onClicker(View v){
+        storeName = (EditText) findViewById(R.id.store_name);
+        storeDate = (EditText) findViewById(R.id.store_date);
+        storeAddress = (EditText) findViewById(R.id.store_address);
+        totalCost = (EditText) findViewById(R.id.total_cost);
+
+        receiptFinal.add(0, storeName.getText().toString());
+        receiptFinal.add(1, storeDate.getText().toString());
+        receiptFinal.add(2, storeAddress.getText().toString());
+        receiptFinal.add(3, totalCost.getText().toString());
+
+
         Intent i = new Intent(OcrCaptureActivity.this,
                 //need to name class below
                 MainActivity.class);
+        i.putStringArrayListExtra("receiptFinal", receiptFinal);
         startActivity(i);
+        }
     }
-
-}

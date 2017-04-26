@@ -19,9 +19,11 @@
     <string name="ocr_failure">No text captured</string>
     <string name="ocr_error">"Error reading text: %1$s"</string>
     <string name="store_name_header">"Store Name:"</string>
-    <string name="address_header">"Address:"</string>
-    <string name="total_cost_header">"Total Cost:"</string>
-    <string name="test"> OcrCaptureActivity.info.get(0)</string>
+    <string name="date_header">Date: </string>
+    <string name="address_header">Address:</string>
+    <string name="total_cost_header">Total Cost:</string>
     <string name="save"> Save Receipt </string>
+    <string name="instruction"> Tap the store name, then date, then address, then total price!</string>
+
 
 </resources>
