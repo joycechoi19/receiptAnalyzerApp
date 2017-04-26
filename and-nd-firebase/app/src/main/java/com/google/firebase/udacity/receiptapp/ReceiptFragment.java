@@ -16,7 +16,8 @@ import static com.google.firebase.udacity.receiptapp.BoxActivity.sRECEIPT;
 
 /**
  * Created by helen on 4/20/17.
- * Displays a detailed view of the selected receipt.
+ * Displays a detailed view of the selected receipt,
+ * fragment based in BoxActivity screen.
  */
 
 public class ReceiptFragment extends Fragment {
@@ -28,7 +29,6 @@ public class ReceiptFragment extends Fragment {
     private static String mStore;
     private static String mDate;
     private static String mAmount;
-    private NumberFormat mCurFormat;
 
     private ReceiptFragment mFragment;
 
@@ -39,7 +39,7 @@ public class ReceiptFragment extends Fragment {
      * Some code sourced and modified from:
      * http://stackoverflow.com/questions/19056693/how-to-properly-implement-onfling-method
      */
-    class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
+    private class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
 
         private static final int SWIPE_MIN_DISTANCE = 80;
         private static final int SWIPE_THRESHOLD_VELOCITY = 50;
@@ -58,11 +58,11 @@ public class ReceiptFragment extends Fragment {
         /**
          * Detects a vigorous swipe event and removes this fragment
          * if the gesture was a swipe down
-         * @param event1
-         * @param event2
-         * @param velocityX
-         * @param velocityY
-         * @return true always
+         * @param event1      when user first touches screen
+         * @param event2      when user's finger leaves screen
+         * @param velocityX   velocity in x-direction
+         * @param velocityY   velocity in y-direction
+         * @return            true always
          */
         @Override
         public boolean onFling(MotionEvent event1, MotionEvent event2,
@@ -83,12 +83,12 @@ public class ReceiptFragment extends Fragment {
      * Creates fragment and populates component views using
      * data from bundle. Also creates gesture detector to
      * detect swipes on screen.
-     * @param savedInstanceState
+     * @param savedInstanceState   null if not returning from saved
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mCurFormat = NumberFormat.getCurrencyInstance();
+        NumberFormat mCurFormat = NumberFormat.getCurrencyInstance();
         mReceipt = (Receipt) getArguments().getSerializable(sRECEIPT);
         mStore = mReceipt.getStore();
         mDate = mReceipt.getDate();
@@ -106,7 +106,7 @@ public class ReceiptFragment extends Fragment {
      * @param inflater             defines fragment layout
      * @param container            view to be inflated
      * @param savedInstanceState   data to populate view
-     * @return
+     * @return                     the root view for this fragment
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -1,9 +1,5 @@
 package com.google.firebase.udacity.receiptapp;
 
-/**
- * Created by helen on 4/13/17.
- */
-
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;

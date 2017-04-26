@@ -52,7 +52,7 @@ implements BoxAdapter.OnChoiceSelectedListener {
      * On creation of the activity, we set up the toolbar and
      * fetch the logged in user's data from the database in order
      * to initialize a RecyclerView for the receipts.
-     * @param savedInstanceState
+     * @param savedInstanceState    null if not returning from saved instance
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -130,8 +130,8 @@ implements BoxAdapter.OnChoiceSelectedListener {
 
     /**
      * Inflates toolbar menu
-     * @param menu
-     * @return
+     * @param menu  menu object
+     * @return      true always
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -146,8 +146,8 @@ implements BoxAdapter.OnChoiceSelectedListener {
 
     /**
      * Defines behavior for each menu item in the toolbar
-     * @param item
-     * @return
+     * @param item   each option item in the toolbar
+     * @return       result of each toolbar item (may not always return)
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

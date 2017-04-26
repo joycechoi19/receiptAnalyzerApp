@@ -463,11 +463,6 @@ public final class OcrCaptureActivity extends AppCompatActivity {
             mCameraSource.doZoom(detector.getScaleFactor());
         }
     }
-
-    /**
-     * TODO FILL OUT THE JAVADOCS HERE
-     * @param v
-     */
     public void onButtonClick(View v){
 
         setContentView(R.layout.activity_info_editor);
@@ -568,13 +563,14 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     Receipt processReceipt(ArrayList<String> r) {
         // we assume that by the time this method is called via
         // onClicker(), the user has verified the validity of the
-        // input in the EditText and
+        // input in the EditText and can thus ascertain with
+        // relative certainty that each parameter is in these
+        // specific indices in the ArrayList
         String name = receipt.get(0);
         String date = receipt.get(1);
         String addr = receipt.get(2);
         Double cost = Double.parseDouble(receipt.get(3));
 
-        Receipt ret = new Receipt(date, name, addr, cost);
-        return ret;
+        return new Receipt(date, name, addr, cost);
     }
 }
