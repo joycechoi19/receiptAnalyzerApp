@@ -38,8 +38,8 @@ public class BoxActivity extends AppCompatActivity
 implements BoxAdapter.OnChoiceSelectedListener {
 
     private static final String TAG = "BoxActivity";
-    private static final String sRECEIPTS = "receipts";
-    private static final String sUSERS = "users";
+    static final String sRECEIPTS = "receipts";
+    static final String sUSERS = "users";
     static final String sRECEIPT = "com.google.firebase.udacity.receiptapp.BoxActivity.sRECEIPT";
 
     private ArrayList<Receipt> mReceiptList;

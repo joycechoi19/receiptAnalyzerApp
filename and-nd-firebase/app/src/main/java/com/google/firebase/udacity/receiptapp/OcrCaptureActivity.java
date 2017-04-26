@@ -45,6 +45,10 @@ import android.widget.Toast;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.api.CommonStatusCodes;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.udacity.receiptapp.ui.camera.CameraSource;
 import com.google.firebase.udacity.receiptapp.ui.camera.CameraSourcePreview;
 import com.google.firebase.udacity.receiptapp.ui.camera.GraphicOverlay;
@@ -54,9 +58,12 @@ import com.google.android.gms.vision.text.TextRecognizer;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
-import static android.R.attr.id;
+import static com.google.firebase.udacity.receiptapp.BoxActivity.sRECEIPTS;
+import static com.google.firebase.udacity.receiptapp.BoxActivity.sUSERS;
 
 
 /**
@@ -78,7 +85,6 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     static EditText storeAddress;
     static EditText totalCost;
 
-
     // Permission request codes need to be < 256
     private static final int RC_HANDLE_CAMERA_PERM = 2;
 
@@ -95,6 +101,13 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     private ScaleGestureDetector scaleGestureDetector;
     private GestureDetector gestureDetector;
     private TextToSpeech tts;
+
+    //
+    private FirebaseAuth mFirebaseAuth;
+    private FirebaseUser mFirebaseUser;
+    private DatabaseReference mDatabase;
+    private String mUserID;
+
     /**
      * Initializes the UI and creates the detector pipeline.
      */
@@ -102,6 +115,13 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.activity_ocr_capture);
+
+        // BEGIN FIREBASE INITIALIZATION
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        mFirebaseUser = mFirebaseAuth.getCurrentUser();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        mUserID = mFirebaseUser.getUid();
+        // END FIREBASE INITIALIZATION
 
         mPreview = (CameraSourcePreview) findViewById(R.id.preview);
         mGraphicOverlay = (GraphicOverlay<OcrGraphic>) findViewById(R.id.graphicOverlay);
@@ -443,6 +463,11 @@ public final class OcrCaptureActivity extends AppCompatActivity {
             mCameraSource.doZoom(detector.getScaleFactor());
         }
     }
+
+    /**
+     * TODO FILL OUT THE JAVADOCS HERE
+     * @param v
+     */
     public void onButtonClick(View v){
 
         setContentView(R.layout.activity_info_editor);
@@ -510,22 +535,46 @@ public final class OcrCaptureActivity extends AppCompatActivity {
             totalCost.setText(receipt.get(3));
         }
     }
+    /**
+     * Once the save button is clicked, this method takes the input
+     * and creates a Receipt object, which is then saved to the database.
+     * After pushing the data, the method returns to BoxActivity.
+     * @param v  the current View that is being displayed
+     */
     public void onClicker(View v){
-        storeName = (EditText) findViewById(R.id.store_name);
-        storeDate = (EditText) findViewById(R.id.store_date);
-        storeAddress = (EditText) findViewById(R.id.store_address);
-        totalCost = (EditText) findViewById(R.id.total_cost);
-
-        receiptFinal.add(0, storeName.getText().toString());
-        receiptFinal.add(1, storeDate.getText().toString());
-        receiptFinal.add(2, storeAddress.getText().toString());
-        receiptFinal.add(3, totalCost.getText().toString());
-
-
+        String key = mDatabase.child(sUSERS).child(mUserID).child(sRECEIPTS)
+                .push().getKey();
+        String path = "/" + sUSERS + "/" + mUserID + "/" + sRECEIPTS + "/";
+        // create a Receipt object from the entered data
+        Receipt curReceipt = processReceipt(receipt);
+        // serialize the Receipt object to store in database
+        Map<String, Object> addReceipt = curReceipt.toMap();
+        Map<String, Object> childUpdates = new HashMap<>();
+        childUpdates.put(path + key, addReceipt);
+        // update the database
+        mDatabase.updateChildren(childUpdates);
+        // go back to BoxActivity
         Intent i = new Intent(OcrCaptureActivity.this,
                 //need to name class below
-                MainActivity.class);
-        i.putStringArrayListExtra("receiptFinal", receiptFinal);
+                BoxActivity.class);
         startActivity(i);
-        }
     }
+    /**
+     * This method creates a Receipt object from the input data
+     * that was saved in an ArrayList.
+     * @param r   the ArrayList from the editing screen
+     * @return    a Receipt object generated from the ArrayList
+     */
+    Receipt processReceipt(ArrayList<String> r) {
+        // we assume that by the time this method is called via
+        // onClicker(), the user has verified the validity of the
+        // input in the EditText and
+        String name = receipt.get(0);
+        String date = receipt.get(1);
+        String addr = receipt.get(2);
+        Double cost = Double.parseDouble(receipt.get(3));
+
+        Receipt ret = new Receipt(date, name, addr, cost);
+        return ret;
+    }
+}
