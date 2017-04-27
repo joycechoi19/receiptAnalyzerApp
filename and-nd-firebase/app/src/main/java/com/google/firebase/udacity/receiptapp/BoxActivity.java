@@ -13,7 +13,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
@@ -21,14 +20,10 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.joanzapata.iconify.IconDrawable;
 import com.joanzapata.iconify.fonts.MaterialIcons;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
 
 /**
  * Displays all receipts scanned and saved using CardView.
@@ -46,13 +41,9 @@ implements BoxAdapter.OnChoiceSelectedListener {
     static final String sRECEIPT = "com.google.firebase.udacity.receiptapp.BoxActivity.sRECEIPT";
 
     private ArrayList<Receipt> mReceiptList;
-    private DatabaseReference mDatabase;
     private FirebaseAuth mFirebaseAuth;
-    private FirebaseUser mFirebaseUser;
-    private String mUserID;
 
     private RecyclerView mRecyclerView;
-    private RecyclerView.LayoutManager mLayoutManager;
     public RecyclerView.Adapter mAdapter;
 
     @Override
@@ -68,22 +59,24 @@ implements BoxAdapter.OnChoiceSelectedListener {
 
         // initialize Firebase references
         mFirebaseAuth = FirebaseAuth.getInstance();
-        mFirebaseUser = mFirebaseAuth.getCurrentUser();
-        mDatabase = FirebaseDatabase.getInstance().getReference();
+        FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
 
         if (mFirebaseUser == null) {
             // user not logged in
             // redirect to main screen
             startActivity(new Intent(this, MainActivity.class));
         } else {
-            mUserID = mFirebaseUser.getUid();
+            String mUserID = mFirebaseUser.getUid();
 
             // initialize recyclerview for receipts
             mRecyclerView = (RecyclerView) findViewById(R.id.view_recycler_box);
             mRecyclerView.setHasFixedSize(true);
-            mLayoutManager = new LinearLayoutManager(this);
+            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
             mRecyclerView.setLayoutManager(mLayoutManager);
 
+            // adds a listener that fires whenever the structure of the
+            // receipt nodes under this user changes in the database
             mDatabase.child(sUSERS).child(mUserID).child(sRECEIPTS)
                     .addChildEventListener(new ChildEventListener() {
                         @Override
@@ -112,24 +105,6 @@ implements BoxAdapter.OnChoiceSelectedListener {
                             Log.d(TAG, "Database data retrieval failed.", databaseError.toException());
                         }
                     });
-
-            // read data from database for the first time
-//            mDatabase.child(sUSERS).child(mUserID).child(sRECEIPTS)
-//                    .addListenerForSingleValueEvent(new ValueEventListener() {
-//                        @Override
-//                        public void onDataChange(DataSnapshot dataSnapshot) {
-//                            mReceiptList.clear();
-//                            for (DataSnapshot snap : dataSnapshot.getChildren()) {
-//                                Log.d(TAG + " 1stread", snap.getValue().toString());
-//                                Receipt receipt = snap.getValue(Receipt.class);
-//                                mReceiptList.add(receipt);
-//                            }
-//                        }
-//                        @Override
-//                        public void onCancelled(DatabaseError databaseError) {
-//                            Log.d(TAG, "The database read failed: " + databaseError.getCode());
-//                        }
-//                    });
 
         }
     }
@@ -183,35 +158,6 @@ implements BoxAdapter.OnChoiceSelectedListener {
         }
     }
 
-
-    /**
-     * TODO: remove this method at submission
-     * @return
-     */
-    ArrayList<Receipt> createDummy() {
-        ArrayList<Receipt> ret = new ArrayList<>();
-        ret.add(new Receipt("07-09-2016", "HOME DEPOT", 9.97));
-        ret.add(new Receipt("09-09-1999", "SCRIVENSHAFT'S QUILL SHOP", 124.02));
-        return ret;
-    }
-    /**
-     * TODO: remove this method at submission
-     */
-    private void saveDummy() {
-        String key = mDatabase.child(sUSERS).child(mUserID).child(sRECEIPTS)
-                .push().getKey();
-        String path = "/" + sUSERS + "/" + mUserID + "/" + sRECEIPTS + "/";
-        Map<String, Object> childUpdates = new HashMap<>();
-        ArrayList<Receipt> temp = createDummy();
-        Iterator<Receipt> iterator = temp.iterator();
-        while(iterator.hasNext()) {
-            Receipt r = iterator.next();
-            Map<String, Object> tempReceipt = r.toMap();
-            childUpdates.put(path + key, tempReceipt);
-        }
-        mDatabase.updateChildren(childUpdates);
-    }
-
     /**
      * Using the index of the selected cardView passed from
      * BoxAdapter, this method creates and populates a fragment
@@ -230,21 +176,26 @@ implements BoxAdapter.OnChoiceSelectedListener {
         fragTransaction.add(R.id.container_fragment_receipt, mFragment).commit();
     }
 
+    /**
+     * This method grabs the data from the Firebase database instance
+     * and handles the serialization back into Receipt objects.
+     * The method then calls datasetChanged that runs on the main
+     * UI thread to ensure that the RecyclerView is updated correctly.
+     * @param snapshot  a snapshot of the Database
+     */
     public void updateDataset(DataSnapshot snapshot) {
         Receipt receipt = snapshot.getValue(Receipt.class);
         mReceiptList.add(receipt);
-        int idx = mReceiptList.size() - 1;
         Log.d(TAG, snapshot.getValue().toString());
         Log.d(TAG, Integer.toString(mAdapter.getItemCount()));
         datasetChanged();
-//        runOnUiThread(new Runnable() {
-//            @Override
-//            public void run() {
-//                mAdapter.notifyDataSetChanged();
-//            }
-//        });
-//        mAdapter.notifyItemInserted(idx);
     }
+
+    /**
+     * Runs on the main UI thread; lets the adapter
+     * know that the dataset has been changed and that
+     * the RecyclerView must be updated.
+     */
     @UiThread
     protected void datasetChanged() {
         mAdapter.notifyDataSetChanged();

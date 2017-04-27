@@ -21,9 +21,12 @@ public class Receipt implements Serializable {
     private String mAddr;
     private Double mAmount;
 
-    Receipt() {
-        // Default constructor required for calls to DataSnapshot.getValue(Receipt.class);
-    }
+    /**
+     * Default class constructor is required in order to enable
+     * serialization back from Object to Receipt when retrieving
+     * data from Firebase realtime database
+     */
+    Receipt() {}
 
     /**
      * Class constructor calls the default with a not-available "na"
@@ -67,6 +70,8 @@ public class Receipt implements Serializable {
     }
 
     /**
+     * getter method enables serialization from Receipt to Object
+     * to store in Firebase realtime database
      * @return store of purchase
      */
     public String getStore() {
@@ -74,6 +79,8 @@ public class Receipt implements Serializable {
     }
 
     /**
+     * getter method enables serialization from Receipt to Object
+     * to store in Firebase realtime database
      * @return date of purchase
      */
     public String getDate() {
@@ -81,6 +88,8 @@ public class Receipt implements Serializable {
     }
 
     /**
+     * getter method enables serialization from Receipt to Object
+     * to store in Firebase realtime database
      * @return total of purchase
      */
     public Double getAmount() {
@@ -88,12 +97,37 @@ public class Receipt implements Serializable {
     }
 
     /**
+     * getter method enables serialization from Receipt to Object
+     * to store in Firebase realtime database
      * @return return address of store of purchase
      */
     public String getAddr() { return mAddr; }
 
+    /**
+     * setter method enables serialization from Object to Receipt
+     * when retrieved from Firebase realtime database
+     * @param store  String store name
+     */
     public void setStore(String store) { this.mStore = store; }
+
+    /**
+     * setter method enables serialization from Object to Receipt
+     * when retrieved from Firebase realtime database
+     * @param date   String date of purchase
+     */
     public void setDate(String date) { this.mDate = date; }
+
+    /**
+     * setter method enables serialization from Object to Receipt
+     * when retrieved from Firebase realtime database
+     * @param amt    Double total amount spent
+     */
     public void setAmount(Double amt) { this.mAmount = amt; }
+
+    /**
+     * setter method enables serialization from Object to Receipt
+     * when retrieved from Firebase realtime database
+     * @param addr   String address of store
+     */
     public void setAddr(String addr) { this.mAddr = addr; }
 }

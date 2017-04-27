@@ -55,8 +55,13 @@ class BoxAdapter extends RecyclerView.Adapter<BoxAdapter.ViewHolder> {
         }
     }
 
-    // Not sure why we need this method but keeping it in
-    // just in case it's useful for debugging later
+    /**
+     * Whenever an item is added to the dataset this method
+     * prompts the adapter to call onCreateViewHolder to
+     * refresh the view.
+     * @param position  of item added
+     * @param r         receipt object added
+     */
     public void add(int position, Receipt r) {
         mReceiptList.add(position, r);
         notifyItemInserted(position);
