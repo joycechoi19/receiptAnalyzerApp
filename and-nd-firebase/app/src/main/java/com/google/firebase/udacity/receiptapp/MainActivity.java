@@ -72,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
         // Initialize Firebase components
         mFirebaseAuth = FirebaseAuth.getInstance();
 
-
         // Initialize references to views
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
         mMessageListView = (ListView) findViewById(R.id.messageListView);
@@ -95,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
                 // TODO: Fire an intent to show an image picker
             }
         });
-
 
         // Enable Send button when there's text to send
         mMessageEditText.addTextChangedListener(new TextWatcher() {
@@ -123,35 +121,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FriendlyMessage friendlyMessage = new FriendlyMessage(mMessageEditText.getText().toString(), mUsername, null);
-//                mMessagesDatabaseReference.push().setValue(friendlyMessage);
-
                 // Clear input box
                 mMessageEditText.setText("");
             }
         });
-
-//        mChildEventListener = new ChildEventListener() {
-//            @Override
-//            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-//                FriendlyMessage friendlyMessage = dataSnapshot.getValue(FriendlyMessage.class);
-//                mMessageAdapter.add(friendlyMessage);
-//            }
-
-//            public void onChildChanged(DataSnapshot dataSnapshot, String s) {}
-//            public void onChildRemoved(DataSnapshot dataSnapshot) {}
-//            public void onChildMoved(DataSnapshot dataSnapshot, String s) {}
-//            public void onCancelled(DatabaseError databaseError) {}
-//        };
-//        mMessagesDatabaseReference.addChildEventListener(mChildEventListener);
 
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
-                    // User is signed in
-//                    Toast.makeText(MainActivity.this, "You're now signed in. Welcome to FriendlyChat.", Toast.LENGTH_SHORT).show();
-//                    onSignedInInitialize(user.getDisplayName());
                     Intent intent = new Intent(MainActivity.this, BoxActivity.class);
                     startActivity(intent);
                 } else {
@@ -165,8 +144,6 @@ public class MainActivity extends AppCompatActivity {
                                     .setIsSmartLockEnabled(false)
                                     .setProviders(
                                             AuthUI.EMAIL_PROVIDER)
-//                                            AuthUI.EMAIL_PROVIDER,
-//                                            AuthUI.GOOGLE_PROVIDER)
                                     .build(),
                             RC_SIGN_IN);
                 }
@@ -191,15 +168,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void onSignedInInitialize(String username) {
         mUsername = username;
-        //TODO: Do this part once db is connected
-        //attachDatabaseReadListener();
     }
 
     private void onSignedOutCleanup(){
         mUsername = ANONYMOUS;
-        //mMessageAdapter.clear();
-        //TODO: Do this part once db is connected
-        //detachDatabaseReadListener();
     }
 
     @Override
@@ -215,22 +187,4 @@ public class MainActivity extends AppCompatActivity {
             mFirebaseAuth.removeAuthStateListener(mAuthStateListener);
         }
     }
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.main_menu, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        switch (item.getItemId()) {
-//            case R.id.menu_sign_out:
-//                AuthUI.getInstance().signOut(this);
-//                return true;
-//            default:
-//                return super.onOptionsItemSelected(item);
-//        }
-//    }
 }
