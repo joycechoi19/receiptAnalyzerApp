@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center"
-        android:text="@string/instruction"
+        android:text="@string/text_instruction"
         android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
     <com.google.firebase.udacity.receiptapp.ui.camera.CameraSourcePreview
@@ -33,10 +33,8 @@
         android:id="@+id/button_done"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_below="@id/button_done"
-        android:layout_centerHorizontal="true"
         android:onClick="onButtonClick"
-        android:text="Done" />
+        android:text="@string/button_done_camera" />
 
 
 </LinearLayout>

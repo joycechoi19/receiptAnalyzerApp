@@ -3,6 +3,7 @@ package com.google.firebase.udacity.receiptapp;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.UiThread;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
@@ -19,6 +21,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.joanzapata.iconify.IconDrawable;
 import com.joanzapata.iconify.fonts.MaterialIcons;
 
@@ -48,12 +51,10 @@ implements BoxAdapter.OnChoiceSelectedListener {
     private FirebaseUser mFirebaseUser;
     private String mUserID;
 
-    /**
-     * On creation of the activity, we set up the toolbar and
-     * fetch the logged in user's data from the database in order
-     * to initialize a RecyclerView for the receipts.
-     * @param savedInstanceState    null if not returning from saved instance
-     */
+    private RecyclerView mRecyclerView;
+    private RecyclerView.LayoutManager mLayoutManager;
+    public RecyclerView.Adapter mAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,8 +64,7 @@ implements BoxAdapter.OnChoiceSelectedListener {
         Toolbar mToolBar = (Toolbar) findViewById(R.id.menu_toolbar);
         setSupportActionBar(mToolBar);
 
-        // BEGIN TODO: replace with database invocation
-//        mReceiptList = createDummy();
+        mReceiptList = new ArrayList<>();
 
         // initialize Firebase references
         mFirebaseAuth = FirebaseAuth.getInstance();
@@ -76,47 +76,61 @@ implements BoxAdapter.OnChoiceSelectedListener {
             // redirect to main screen
             startActivity(new Intent(this, MainActivity.class));
         } else {
-            mReceiptList = new ArrayList<>();
             mUserID = mFirebaseUser.getUid();
-            mDatabase.child(sUSERS).child(mUserID).child(sRECEIPTS)
-                    .addChildEventListener(new ChildEventListener() {
-                @Override
-                public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                    for (DataSnapshot snap: dataSnapshot.getChildren()) {
-                        Receipt receipt = snap.getValue(Receipt.class);
-                        mReceiptList.add(receipt);
-                    }
-                }
-
-                @Override
-                public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-                }
-
-                @Override
-                public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-                }
-
-                @Override
-                public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-                }
-
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-                    // Failed to read value
-                    Log.d(TAG, "Database data retrieval failed.", databaseError.toException());
-                }
-            });
 
             // initialize recyclerview for receipts
-            RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.view_recycler_box);
+            mRecyclerView = (RecyclerView) findViewById(R.id.view_recycler_box);
             mRecyclerView.setHasFixedSize(true);
-            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
+            mLayoutManager = new LinearLayoutManager(this);
             mRecyclerView.setLayoutManager(mLayoutManager);
-            RecyclerView.Adapter mAdapter = new BoxAdapter(this, mReceiptList);
-            mRecyclerView.setAdapter(mAdapter);
+
+            mDatabase.child(sUSERS).child(mUserID).child(sRECEIPTS)
+                    .addChildEventListener(new ChildEventListener() {
+                        @Override
+                        public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                            updateDataset(dataSnapshot);
+                        }
+
+                        @Override
+                        public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+                        }
+
+                        @Override
+                        public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+                        }
+
+                        @Override
+                        public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+                            // Failed to read value
+                            Log.d(TAG, "Database data retrieval failed.", databaseError.toException());
+                        }
+                    });
+
+            // read data from database for the first time
+//            mDatabase.child(sUSERS).child(mUserID).child(sRECEIPTS)
+//                    .addListenerForSingleValueEvent(new ValueEventListener() {
+//                        @Override
+//                        public void onDataChange(DataSnapshot dataSnapshot) {
+//                            mReceiptList.clear();
+//                            for (DataSnapshot snap : dataSnapshot.getChildren()) {
+//                                Log.d(TAG + " 1stread", snap.getValue().toString());
+//                                Receipt receipt = snap.getValue(Receipt.class);
+//                                mReceiptList.add(receipt);
+//                            }
+//                        }
+//                        @Override
+//                        public void onCancelled(DatabaseError databaseError) {
+//                            Log.d(TAG, "The database read failed: " + databaseError.getCode());
+//                        }
+//                    });
+
         }
     }
 
@@ -126,6 +140,10 @@ implements BoxAdapter.OnChoiceSelectedListener {
     @Override
     protected void onStart() {
         super.onStart();
+        // populate recyclerview with initial data
+        Log.d(TAG + " init", Integer.toString(mReceiptList.size()));
+        mAdapter = new BoxAdapter(this, mReceiptList);
+        mRecyclerView.setAdapter(mAdapter);
     }
 
     /**
@@ -154,12 +172,11 @@ implements BoxAdapter.OnChoiceSelectedListener {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.action_add_receipt:
-                Intent i = new Intent(this,
-                        PreReaderActivity.class);
-                startActivity(i);
+                startActivity(new Intent(this, PreReaderActivity.class));
                 return true;
             case R.id.action_sign_out:
-                // TODO: sign out of firebase here
+                mFirebaseAuth.signOut();
+                startActivity(new Intent(this, MainActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -211,5 +228,25 @@ implements BoxAdapter.OnChoiceSelectedListener {
         args.putSerializable(sRECEIPT, receipt);
         mFragment.setArguments(args);
         fragTransaction.add(R.id.container_fragment_receipt, mFragment).commit();
+    }
+
+    public void updateDataset(DataSnapshot snapshot) {
+        Receipt receipt = snapshot.getValue(Receipt.class);
+        mReceiptList.add(receipt);
+        int idx = mReceiptList.size() - 1;
+        Log.d(TAG, snapshot.getValue().toString());
+        Log.d(TAG, Integer.toString(mAdapter.getItemCount()));
+        datasetChanged();
+//        runOnUiThread(new Runnable() {
+//            @Override
+//            public void run() {
+//                mAdapter.notifyDataSetChanged();
+//            }
+//        });
+//        mAdapter.notifyItemInserted(idx);
+    }
+    @UiThread
+    protected void datasetChanged() {
+        mAdapter.notifyDataSetChanged();
     }
 }

@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.07"
-        android:text="@string/store_name_header" />
+        android:text="@string/text_store_name_header" />
 
     <EditText
         android:id="@+id/store_name"
@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.07"
-        android:text="@string/date_header" />
+        android:text="@string/text_store_date_header" />
 
     <EditText
         android:id="@+id/store_date"
@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.07"
-        android:text="@string/address_header" />
+        android:text="@string/text_store_address_header" />
 
     <EditText
         android:id="@+id/store_address"
@@ -58,7 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.07"
-        android:text="@string/total_cost_header" />
+        android:text="@string/text_store_cost_header" />
 
     <EditText
         android:id="@+id/total_cost"
@@ -74,6 +74,6 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.07"
         android:onClick="onClicker"
-        android:text="@string/save" />
+        android:text="@string/text_save_receipt" />
 
 </LinearLayout>

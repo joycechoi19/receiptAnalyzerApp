@@ -22,7 +22,6 @@
         </activity>
         <activity android:name=".BoxActivity" />
         <activity android:name=".PreReaderActivity"/>
-        <activity android:name=".InfoEditorActivity" />
         <activity android:name=".OcrCaptureActivity" />
     </application>
 

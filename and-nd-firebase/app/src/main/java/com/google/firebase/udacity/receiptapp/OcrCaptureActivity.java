@@ -27,7 +27,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
-import android.os.Build;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
@@ -44,7 +43,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
-import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -52,7 +50,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.udacity.receiptapp.ui.camera.CameraSource;
 import com.google.firebase.udacity.receiptapp.ui.camera.CameraSourcePreview;
 import com.google.firebase.udacity.receiptapp.ui.camera.GraphicOverlay;
-import com.google.android.gms.vision.text.Text;
 import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
 
@@ -80,10 +77,10 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     //Make arraylist for receipt items
     public ArrayList<String> receipt = new ArrayList<>();
     public ArrayList<String> receiptFinal = new ArrayList<>();
-    static EditText storeName;
-    static EditText storeDate;
-    static EditText storeAddress;
-    static EditText totalCost;
+    private EditText storeName;
+    private EditText storeDate;
+    private EditText storeAddress;
+    private EditText totalCost;
 
     // Permission request codes need to be < 256
     private static final int RC_HANDLE_CAMERA_PERM = 2;
@@ -102,7 +99,7 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     private GestureDetector gestureDetector;
     private TextToSpeech tts;
 
-    //
+    // Firebase variables
     private FirebaseAuth mFirebaseAuth;
     private FirebaseUser mFirebaseUser;
     private DatabaseReference mDatabase;
@@ -188,9 +185,9 @@ public final class OcrCaptureActivity extends AppCompatActivity {
             }
         };
 
-        Snackbar.make(mGraphicOverlay, R.string.permission_camera_rationale,
+        Snackbar.make(mGraphicOverlay, R.string.text_permission_camera_rationale,
                 Snackbar.LENGTH_INDEFINITE)
-                .setAction(R.string.ok, listener)
+                .setAction(R.string.text_ok, listener)
                 .show();
     }
 
@@ -239,8 +236,8 @@ public final class OcrCaptureActivity extends AppCompatActivity {
             boolean hasLowStorage = registerReceiver(null, lowstorageFilter) != null;
 
             if (hasLowStorage) {
-                Toast.makeText(this, R.string.low_storage_error, Toast.LENGTH_LONG).show();
-                Log.w(TAG, getString(R.string.low_storage_error));
+                Toast.makeText(this, R.string.text_low_storage_error, Toast.LENGTH_LONG).show();
+                Log.w(TAG, getString(R.string.text_low_storage_error));
             }
         }
 
@@ -334,8 +331,8 @@ public final class OcrCaptureActivity extends AppCompatActivity {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Multitracker sample")
-                .setMessage(R.string.no_camera_permission)
-                .setPositiveButton(R.string.ok, listener)
+                .setMessage(R.string.text_no_camera_permission)
+                .setPositiveButton(R.string.text_ok, listener)
                 .show();
     }
 
@@ -566,10 +563,10 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         // input in the EditText and can thus ascertain with
         // relative certainty that each parameter is in these
         // specific indices in the ArrayList
-        String name = receipt.get(0);
-        String date = receipt.get(1);
-        String addr = receipt.get(2);
-        Double cost = Double.parseDouble(receipt.get(3));
+        String name = storeName.getText().toString();
+        String date = storeDate.getText().toString();
+        String addr = storeAddress.getText().toString();
+        Double cost = Double.parseDouble(totalCost.getText().toString());
 
         return new Receipt(date, name, addr, cost);
     }

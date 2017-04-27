@@ -103,15 +103,15 @@ public class PreReaderActivity extends Activity implements View.OnClickListener 
             if (resultCode == CommonStatusCodes.SUCCESS) {
                 if (data != null) {
                     String text = data.getStringExtra(OcrCaptureActivity.TextBlockObject);
-                    statusMessage.setText(R.string.ocr_success);
+                    statusMessage.setText(R.string.text_ocr_success);
                     textValue.setText(text);
                     Log.d(TAG, "Text read: " + text);
                 } else {
-                    statusMessage.setText(R.string.ocr_failure);
+                    statusMessage.setText(R.string.text_ocr_failure);
                     Log.d(TAG, "No Text captured, intent data is null");
                 }
             } else {
-                statusMessage.setText(String.format(getString(R.string.ocr_error),
+                statusMessage.setText(String.format(getString(R.string.text_ocr_error),
                         CommonStatusCodes.getStatusCodeString(resultCode)));
             }
         }

@@ -86,4 +86,14 @@ public class Receipt implements Serializable {
     public Double getAmount() {
         return mAmount;
     }
+
+    /**
+     * @return return address of store of purchase
+     */
+    public String getAddr() { return mAddr; }
+
+    public void setStore(String store) { this.mStore = store; }
+    public void setDate(String date) { this.mDate = date; }
+    public void setAmount(Double amt) { this.mAmount = amt; }
+    public void setAddr(String addr) { this.mAddr = addr; }
 }

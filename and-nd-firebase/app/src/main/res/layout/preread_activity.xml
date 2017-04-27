@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/ocr_header"
+        android:text="@string/text_ocr_header"
         android:id="@+id/status_message"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -32,7 +32,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/read_text"
+        android:text="@string/text_read_text"
         android:id="@+id/read_text"
         android:onClick="onClick"
         android:layout_alignParentBottom="true"
@@ -41,7 +41,7 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/auto_focus"
+        android:text="@string/text_auto_focus"
         android:id="@+id/auto_focus"
         android:layout_below="@+id/text_value"
         android:layout_alignParentLeft="true"
@@ -52,7 +52,7 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/use_flash"
+        android:text="@string/text_use_flash"
         android:id="@+id/use_flash"
         android:layout_alignTop="@+id/auto_focus"
         android:layout_alignParentRight="true"
