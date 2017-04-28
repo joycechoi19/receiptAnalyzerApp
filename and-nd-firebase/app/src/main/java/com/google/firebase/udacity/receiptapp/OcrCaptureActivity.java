@@ -110,12 +110,6 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     private DatabaseReference mDatabase;
     private String mUserID;
 
-    // checks for editable fields
-    private Boolean mDateFilled = false;
-    private Boolean mStoreFilled = false;
-    private Boolean mAddrFilled = false;
-    private Boolean mAmountFilled = false;
-
     /**
      * Initializes the UI and creates the detector pipeline.
      */
@@ -149,11 +143,6 @@ public final class OcrCaptureActivity extends AppCompatActivity {
 
         gestureDetector = new GestureDetector(this, new CaptureGestureListener());
         scaleGestureDetector = new ScaleGestureDetector(this, new ScaleListener());
-
-//        Snackbar.make(mGraphicOverlay, "Tap the store name, then address, then total price!",
-//                Snackbar.LENGTH_LONG)
-//                .show();
-
 
         TextToSpeech.OnInitListener listener =
                 new TextToSpeech.OnInitListener() {
@@ -471,6 +460,12 @@ public final class OcrCaptureActivity extends AppCompatActivity {
             mCameraSource.doZoom(detector.getScaleFactor());
         }
     }
+
+    /**
+     * changes layout to info editing screen and initializes appropriate
+     * view references for checking input and saving to database.
+     * @param v  the view of this activity
+     */
     public void onButtonClick(View v){
 
         setContentView(R.layout.activity_info_editor);
@@ -571,135 +566,5 @@ public final class OcrCaptureActivity extends AppCompatActivity {
             ret = -1;
         }
         return ret;
-    }
-    private Boolean validateName() {
-        if (storeName.getText().toString().trim().isEmpty()) {
-            TextInputLayout layout = (TextInputLayout) findViewById(R.id.input_layout_name);
-            layout.setError(getString(R.string.error_receipt_store));
-            return false;
-        }
-        return true;
-    }
-    private Boolean validateDate() {
-        if (storeDate.getText().toString().trim().isEmpty()) {
-            TextInputLayout layout = (TextInputLayout) findViewById(R.id.input_layout_date);
-            layout.setError(getString(R.string.error_receipt_date));
-            return false;
-        }
-        return true;
-    }
-    private Boolean validateAmt() {
-        if (totalCost.getText().toString().trim().isEmpty()) {
-            TextInputLayout layout = (TextInputLayout) findViewById(R.id.input_layout_amount);
-            layout.setError(getString(R.string.error_receipt_amount));
-            return false;
-        }
-        return true;
-    }
-
-    /**
-     * This method adds textChangedListeners to all of our EditText fields
-     * so that the submit button is enabled only when all the fields are filled.
-     */
-    private void listenText() {
-        storeName.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                // n/a
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                if (editable.length() > 0) {
-                    mStoreFilled = true;
-                }
-                if (mDateFilled && mStoreFilled && mAmountFilled) {
-                    mSaveReceipt.setEnabled(true);
-                } else {
-                    mSaveReceipt.setEnabled(false);
-                }
-            }
-        });
-        storeAddress.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                // n/a
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                if (editable.length() > 0) {
-                    mAddrFilled = true;
-                }
-                if (mDateFilled && mStoreFilled && mAmountFilled) {
-                    mSaveReceipt.setEnabled(true);
-                } else {
-                    mSaveReceipt.setEnabled(false);
-                }
-            }
-        });
-        storeDate.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                // n/a
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                if (editable.length() > 0) {
-                    mDateFilled = true;
-                }
-                if (mDateFilled && mStoreFilled && mAddrFilled && mAmountFilled) {
-                    mSaveReceipt.setEnabled(true);
-                } else {
-                    mSaveReceipt.setEnabled(false);
-                }
-            }
-        });
-        totalCost.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                // n/a
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                if (editable.length() > 0) {
-                    // add check to make sure input is number in correct format
-                    String s = editable.toString();
-                    try {
-                        Double.parseDouble(s);
-                    } catch (NumberFormatException e) {
-                        Toast.makeText(getApplicationContext(), "Invalid input", Toast.LENGTH_SHORT);
-                    }
-                    mAmountFilled = true;
-                }
-                if (mDateFilled && mStoreFilled && mAmountFilled) {
-                    mSaveReceipt.setEnabled(true);
-                } else {
-                    mSaveReceipt.setEnabled(false);
-                }
-            }
-        });
     }
 }
