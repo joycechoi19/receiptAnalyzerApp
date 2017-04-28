@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/hint_receipt_amount"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:layout_weight="0.11" />
     </android.support.design.widget.TextInputLayout>
 
