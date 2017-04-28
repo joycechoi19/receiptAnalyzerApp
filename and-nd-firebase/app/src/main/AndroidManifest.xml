@@ -33,6 +33,7 @@
         <activity android:name=".BoxActivity" />
         <activity android:name=".PreReaderActivity"/>
         <activity android:name=".OcrCaptureActivity" />
+        <activity android:name=".MapsMarkerActivity" />
     </application>
 
 </manifest>
