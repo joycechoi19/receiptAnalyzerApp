@@ -37,7 +37,6 @@ public class PreReaderActivity extends Activity implements View.OnClickListener 
     private CompoundButton autoFocus;
     private CompoundButton useFlash;
     private TextView statusMessage;
-    private TextView textValue;
 
     private static final int RC_OCR_CAPTURE = 9003;
     private static final String TAG = "MainActivity";
@@ -48,8 +47,6 @@ public class PreReaderActivity extends Activity implements View.OnClickListener 
         setContentView(R.layout.preread_activity);
 
         statusMessage = (TextView)findViewById(R.id.status_message);
-        textValue = (TextView)findViewById(R.id.text_value);
-
         autoFocus = (CompoundButton) findViewById(R.id.auto_focus);
         useFlash = (CompoundButton) findViewById(R.id.use_flash);
 
@@ -104,7 +101,6 @@ public class PreReaderActivity extends Activity implements View.OnClickListener 
                 if (data != null) {
                     String text = data.getStringExtra(OcrCaptureActivity.TextBlockObject);
                     statusMessage.setText(R.string.text_ocr_success);
-                    textValue.setText(text);
                     Log.d(TAG, "Text read: " + text);
                 } else {
                     statusMessage.setText(R.string.text_ocr_failure);

@@ -2,6 +2,14 @@
     <string name="app_name">Receipt Analyzer</string>
     <string name="action_add_receipt">Add Receipt</string>
     <string name="action_sign_out">Sign Out</string>
+    <string name="error_receipt_date">Please enter a valid date</string>
+    <string name="error_receipt_store">Please enter a store name</string>
+    <string name="error_receipt_address">Please enter a store address</string>
+    <string name="error_receipt_amount">Please enter the total cost</string>
+    <string name="hint_receipt_date">Purchase Date</string>
+    <string name="hint_receipt_store">Store Name</string>
+    <string name="hint_receipt_address">Store Address (optional)</string>
+    <string name="hint_receipt_amount">Total Cost</string>
     <string name="send_button_label">Send</string>
     <string name="text_receipt_amount">00.00</string>
     <string name="text_receipt_date">NO DATE AVAILABLE</string>
@@ -13,18 +21,14 @@
     <string name="text_no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
     <string name="text_low_storage_error">Ocr dependencies cannot be downloaded due to low device storage</string>
     <string name="title_activity_main">Ocr Detector Sample</string>
-    <string name="text_ocr_header">Click &quot;Detect Text&quot; to detect text</string>
-    <string name="text_read_text">Detect Text</string>
+    <string name="text_ocr_header">Specify options for camera:</string>
+    <string name="text_read_text">Scan Receipt</string>
     <string name="text_auto_focus">Auto Focus</string>
     <string name="text_use_flash">Use Flash</string>
     <string name="button_done_camera">Done</string>
     <string name="text_ocr_success">Text read successfully</string>
     <string name="text_ocr_failure">No text captured</string>
     <string name="text_ocr_error">"Error reading text: %1$s"</string>
-    <string name="text_store_name_header">"Store Name:"</string>
-    <string name="text_store_date_header">Date: </string>
-    <string name="text_store_address_header">Address:</string>
-    <string name="text_store_cost_header">Total Cost:</string>
     <string name="text_save_receipt"> Save Receipt </string>
     <string name="text_instruction"> Tap the store name, then date, then address, then total price!</string>
 

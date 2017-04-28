@@ -31,13 +31,17 @@ import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -54,6 +58,7 @@ import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
 
 import java.io.IOException;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
@@ -76,11 +81,11 @@ public final class OcrCaptureActivity extends AppCompatActivity {
 
     //Make arraylist for receipt items
     public ArrayList<String> receipt = new ArrayList<>();
-    public ArrayList<String> receiptFinal = new ArrayList<>();
     private EditText storeName;
     private EditText storeDate;
     private EditText storeAddress;
     private EditText totalCost;
+    private Button mSaveReceipt;
 
     // Permission request codes need to be < 256
     private static final int RC_HANDLE_CAMERA_PERM = 2;
@@ -104,6 +109,12 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     private FirebaseUser mFirebaseUser;
     private DatabaseReference mDatabase;
     private String mUserID;
+
+    // checks for editable fields
+    private Boolean mDateFilled = false;
+    private Boolean mStoreFilled = false;
+    private Boolean mAddrFilled = false;
+    private Boolean mAmountFilled = false;
 
     /**
      * Initializes the UI and creates the detector pipeline.
@@ -463,67 +474,30 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     public void onButtonClick(View v){
 
         setContentView(R.layout.activity_info_editor);
-        if(receipt.size() == 0){
-            storeName = (EditText) findViewById(R.id.store_name);
-            storeName.setText("No Store Selected!");
 
-            storeDate = (EditText) findViewById(R.id.store_date);
-            storeDate.setText("No Date Selected!");
+        // generate references to views
+        storeName = (EditText) findViewById(R.id.store_name);
+        storeDate = (EditText) findViewById(R.id.store_date);
+        storeAddress = (EditText) findViewById(R.id.store_address);
+        totalCost = (EditText) findViewById(R.id.total_cost);
+        mSaveReceipt = (Button) findViewById(R.id.button_save);
 
-            storeAddress = (EditText) findViewById(R.id.store_address);
-            storeAddress.setText("No Address Selected!");
-
-            totalCost = (EditText)findViewById(R.id.total_cost);
-            totalCost.setText("No Cost Selected!");
-        }else if(receipt.size() == 1) {
-            storeName = (EditText) findViewById(R.id.store_name);
+        if (receipt.size() == 1) {
             storeName.setText(receipt.get(0));
-
-            storeDate = (EditText) findViewById(R.id.store_date);
-            storeDate.setText("No Date Selected!");
-
-            storeAddress = (EditText) findViewById(R.id.store_address);
-            storeAddress.setText("No Address Selected!");
-
-            totalCost = (EditText)findViewById(R.id.total_cost);
-            totalCost.setText("No Cost Selected!");
-        }else if(receipt.size() == 2) {
-            storeName = (EditText) findViewById(R.id.store_name);
+            storeAddress.setText(R.string.hint_receipt_address);
+        } else if (receipt.size() == 2) {
             storeName.setText(receipt.get(0));
-
-            storeDate = (EditText) findViewById(R.id.store_date);
             storeDate.setText(receipt.get(1));
-
-            storeAddress = (EditText) findViewById(R.id.store_address);
-            storeAddress.setText("No Address Selected!");
-
-            totalCost = (EditText)findViewById(R.id.total_cost);
-            totalCost.setText("No Cost Selected!");
-
-        }else if(receipt.size() ==3){
-            storeName = (EditText) findViewById(R.id.store_name);
+            storeAddress.setText(R.string.hint_receipt_address);
+        } else if (receipt.size() == 3){
             storeName.setText(receipt.get(0));
-
-            storeDate = (EditText) findViewById(R.id.store_date);
             storeDate.setText(receipt.get(1));
-
-            storeAddress = (EditText) findViewById(R.id.store_address);
             storeAddress.setText(receipt.get(2));
 
-            totalCost = (EditText)findViewById(R.id.total_cost);
-            totalCost.setText("No Cost Selected!");
-
-        }else{
-            storeName = (EditText) findViewById(R.id.store_name);
+        } else if (receipt.size() == 4) {
             storeName.setText(receipt.get(0));
-
-            storeDate = (EditText) findViewById(R.id.store_date);
             storeDate.setText(receipt.get(1));
-
-            storeAddress = (EditText) findViewById(R.id.store_address);
             storeAddress.setText(receipt.get(2));
-
-            totalCost = (EditText) findViewById(R.id.total_cost);
             totalCost.setText(receipt.get(3));
         }
     }
@@ -534,40 +508,198 @@ public final class OcrCaptureActivity extends AppCompatActivity {
      * @param v  the current View that is being displayed
      */
     public void onClicker(View v){
-        String key = mDatabase.child(sUSERS).child(mUserID).child(sRECEIPTS)
-                .push().getKey();
-        String path = "/" + sUSERS + "/" + mUserID + "/" + sRECEIPTS + "/";
-        // create a Receipt object from the entered data
-        Receipt curReceipt = processReceipt(receipt);
-        // serialize the Receipt object to store in database
-        Map<String, Object> addReceipt = curReceipt.toMap();
-        Map<String, Object> childUpdates = new HashMap<>();
-        childUpdates.put(path + key, addReceipt);
-        // update the database
-        mDatabase.updateChildren(childUpdates);
-        // go back to BoxActivity
-        Intent i = new Intent(OcrCaptureActivity.this,
-                //need to name class below
-                BoxActivity.class);
-        startActivity(i);
+        int validate = validateReceipt();
+        if(validate < 0) {
+            return;
+        } else {
+            String key = mDatabase.child(sUSERS).child(mUserID).child(sRECEIPTS)
+                    .push().getKey();
+            String path = "/" + sUSERS + "/" + mUserID + "/" + sRECEIPTS + "/";
+            // create a Receipt object from the entered data
+            Receipt curReceipt = processReceipt(receipt);
+            // serialize the Receipt object to store in database
+            Map<String, Object> addReceipt = curReceipt.toMap();
+            Map<String, Object> childUpdates = new HashMap<>();
+            childUpdates.put(path + key, addReceipt);
+            // update the database
+            mDatabase.updateChildren(childUpdates);
+            // go back to BoxActivity
+            Intent i = new Intent(OcrCaptureActivity.this,
+                    //need to name class below
+                    BoxActivity.class);
+            startActivity(i);
+        }
     }
     /**
      * This method creates a Receipt object from the input data
-     * that was saved in an ArrayList.
+     * that was saved in an ArrayList. Only called if all required
+     * fields have been filled out by user.
      * @param r   the ArrayList from the editing screen
      * @return    a Receipt object generated from the ArrayList
      */
     Receipt processReceipt(ArrayList<String> r) {
-        // we assume that by the time this method is called via
-        // onClicker(), the user has verified the validity of the
-        // input in the EditText and can thus ascertain with
-        // relative certainty that each parameter is in these
-        // specific indices in the ArrayList
         String name = storeName.getText().toString();
         String date = storeDate.getText().toString();
         String addr = storeAddress.getText().toString();
         Double cost = Double.parseDouble(totalCost.getText().toString());
 
         return new Receipt(date, name, addr, cost);
+    }
+
+    /**
+     * Upon pressing the "save receipt" button, we check all the inputs
+     * to make sure they are valid. If invalid, error message displayed
+     * in applicable fields and return -1. If all is well, return 0.
+     * note : we do not check for address input field, as this is optional
+     * @return  -1 or 0 depending on validation results
+     */
+    private int validateReceipt() {
+        int ret = 0;
+        if (storeName.getText().toString().trim().isEmpty()) {
+            TextInputLayout layout = (TextInputLayout) findViewById(R.id.input_layout_name);
+            layout.setError(getString(R.string.error_receipt_store));
+            ret = -1;
+        }
+        if (storeDate.getText().toString().trim().isEmpty()) {
+            TextInputLayout layout = (TextInputLayout) findViewById(R.id.input_layout_date);
+            layout.setError(getString(R.string.error_receipt_date));
+            ret = -1;
+        }
+        if (totalCost.getText().toString().trim().isEmpty()) {
+            TextInputLayout layout = (TextInputLayout) findViewById(R.id.input_layout_amount);
+            layout.setError(getString(R.string.error_receipt_amount));
+            ret = -1;
+        }
+        return ret;
+    }
+    private Boolean validateName() {
+        if (storeName.getText().toString().trim().isEmpty()) {
+            TextInputLayout layout = (TextInputLayout) findViewById(R.id.input_layout_name);
+            layout.setError(getString(R.string.error_receipt_store));
+            return false;
+        }
+        return true;
+    }
+    private Boolean validateDate() {
+        if (storeDate.getText().toString().trim().isEmpty()) {
+            TextInputLayout layout = (TextInputLayout) findViewById(R.id.input_layout_date);
+            layout.setError(getString(R.string.error_receipt_date));
+            return false;
+        }
+        return true;
+    }
+    private Boolean validateAmt() {
+        if (totalCost.getText().toString().trim().isEmpty()) {
+            TextInputLayout layout = (TextInputLayout) findViewById(R.id.input_layout_amount);
+            layout.setError(getString(R.string.error_receipt_amount));
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * This method adds textChangedListeners to all of our EditText fields
+     * so that the submit button is enabled only when all the fields are filled.
+     */
+    private void listenText() {
+        storeName.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                // n/a
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (editable.length() > 0) {
+                    mStoreFilled = true;
+                }
+                if (mDateFilled && mStoreFilled && mAmountFilled) {
+                    mSaveReceipt.setEnabled(true);
+                } else {
+                    mSaveReceipt.setEnabled(false);
+                }
+            }
+        });
+        storeAddress.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                // n/a
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (editable.length() > 0) {
+                    mAddrFilled = true;
+                }
+                if (mDateFilled && mStoreFilled && mAmountFilled) {
+                    mSaveReceipt.setEnabled(true);
+                } else {
+                    mSaveReceipt.setEnabled(false);
+                }
+            }
+        });
+        storeDate.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                // n/a
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (editable.length() > 0) {
+                    mDateFilled = true;
+                }
+                if (mDateFilled && mStoreFilled && mAddrFilled && mAmountFilled) {
+                    mSaveReceipt.setEnabled(true);
+                } else {
+                    mSaveReceipt.setEnabled(false);
+                }
+            }
+        });
+        totalCost.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                // n/a
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (editable.length() > 0) {
+                    // add check to make sure input is number in correct format
+                    String s = editable.toString();
+                    try {
+                        Double.parseDouble(s);
+                    } catch (NumberFormatException e) {
+                        Toast.makeText(getApplicationContext(), "Invalid input", Toast.LENGTH_SHORT);
+                    }
+                    mAmountFilled = true;
+                }
+                if (mDateFilled && mStoreFilled && mAmountFilled) {
+                    mSaveReceipt.setEnabled(true);
+                } else {
+                    mSaveReceipt.setEnabled(false);
+                }
+            }
+        });
     }
 }

@@ -31,10 +31,12 @@
 
     <Button
         android:id="@+id/button_done"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="40dp"
+        android:layout_gravity="center"
         android:onClick="onButtonClick"
-        android:text="@string/button_done_camera" />
+        android:text="@string/button_done_camera"
+        style="@style/Widget.AppCompat.Button.Colored"/>
 
 
 </LinearLayout>
