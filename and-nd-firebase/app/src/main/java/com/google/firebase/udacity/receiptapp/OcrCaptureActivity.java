@@ -47,6 +47,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.maps.model.LatLng;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -537,8 +538,9 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         String date = storeDate.getText().toString();
         String addr = storeAddress.getText().toString();
         Double cost = Double.parseDouble(totalCost.getText().toString());
+        LatLng latLng = null;
 
-        return new Receipt(date, name, addr, cost);
+        return new Receipt(date, name, addr, cost, latLng);
     }
 
     /**

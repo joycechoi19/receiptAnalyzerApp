@@ -33,20 +33,21 @@ public class Receipt extends Object implements Serializable {
     private String mStore;
     private String mAddr;
     private Double mAmount;
-    //private LatLng mLatLong;
 
     private Context context;
     public double longitude;
     public double latitude;
-    //Context context = Receipt.getApplicationContext();
 
     /**
      * Default class constructor is required in order to enable
      * serialization back from Object to Receipt when retrieving
      * data from Firebase realtime database
+     * @param date
+     * @param name
+     * @param addr
+     * @param cost
+     * @param latLng
      */
-    Receipt() {
-    }
 
     /**
      * Class constructor calls the default with a not-available "na"
@@ -57,8 +58,8 @@ public class Receipt extends Object implements Serializable {
      * @param store  Store name
      * @param amount Amount of money spent
      */
-    Receipt(String date, String store, Double amount) throws IOException {
-        this(date, store, "na", amount);
+    Receipt(String date, String store, Double amount, LatLng latLng) throws IOException {
+        this(date, store, "na", amount, null);
     }
 
     /**
@@ -69,7 +70,7 @@ public class Receipt extends Object implements Serializable {
      * @param addr   Store address
      * @param amount Amount of money spent
      */
-    Receipt(String date, String store, String addr, Double amount) throws IOException {
+    Receipt(String date, String store, String addr, Double amount, LatLng latLng) throws IOException {
         this.mDate = date;
         this.mStore = store;
         this.mAddr = addr;
