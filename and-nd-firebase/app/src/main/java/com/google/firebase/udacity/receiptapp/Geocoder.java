@@ -5,6 +5,5 @@ package com.google.firebase.udacity.receiptapp;
  */
 
 public class Geocoder extends Object {
-    //public String addr = getAddr();
 
 }

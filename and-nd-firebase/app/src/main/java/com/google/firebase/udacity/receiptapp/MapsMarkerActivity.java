@@ -1,8 +1,5 @@
 package com.google.firebase.udacity.receiptapp;
 
-/**
- * Created by joycechoi on 4/28/17.
- */
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -47,11 +44,11 @@ public class MapsMarkerActivity extends AppCompatActivity
         // Add a marker in Sydney, Australia,
         // and move the map's camera to the same location.
         //LatLng geocoderaddress = new
-        //LatLng sydney = new LatLng(-33.852, 151.211);
-        LatLng here = Receipt.mLatLong;
-        googleMap.addMarker(new MarkerOptions().position(here)
+        LatLng sydney = new LatLng(-33.852, 151.211);
+        //LatLng here = Receipt.mLatLong;
+        googleMap.addMarker(new MarkerOptions().position(sydney)
                 .title("Marker in lalalallalala"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(here));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
 }
 

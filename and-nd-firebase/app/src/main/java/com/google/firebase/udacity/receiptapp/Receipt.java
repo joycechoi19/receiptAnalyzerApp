@@ -58,8 +58,8 @@ public class Receipt extends Object implements Serializable {
      * @param store  Store name
      * @param amount Amount of money spent
      */
-    Receipt(String date, String store, Double amount, LatLng latLng) throws IOException {
-        this(date, store, "na", amount, null);
+    Receipt(String date, String store, Double amount) {
+        this(date, store, "na", amount);
     }
 
     /**
@@ -70,12 +70,12 @@ public class Receipt extends Object implements Serializable {
      * @param addr   Store address
      * @param amount Amount of money spent
      */
-    Receipt(String date, String store, String addr, Double amount, LatLng latLng) throws IOException {
+    Receipt(String date, String store, String addr, Double amount) {
         this.mDate = date;
         this.mStore = store;
         this.mAddr = addr;
         this.mAmount = amount;
-        this.mLatLong = getLocationFromAddress(addr);
+        //this.mLatLong = getLocationFromAddress(addr);
     }
 
 
@@ -186,12 +186,12 @@ public class Receipt extends Object implements Serializable {
 
         for (Address add : address) {
             //check for null
-
             if (add != null) {
                 //Get latLng from String
                 LatLng mLatLong = new LatLng(add.getLatitude(), add.getLongitude());
             }
         }
+        System.out.println(mLatLong);
         return mLatLong;
     }
 
