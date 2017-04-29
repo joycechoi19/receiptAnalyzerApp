@@ -45,7 +45,10 @@
         android:id="@+id/read_text"
         android:onClick="onClick"
         android:layout_gravity="center"
-        style="@style/Widget.AppCompat.Button.Colored" />
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:fontFamily="sans-serif"
+        android:background="#B8E986"
+        android:textColor="@android:color/white"/>
 
 
 
