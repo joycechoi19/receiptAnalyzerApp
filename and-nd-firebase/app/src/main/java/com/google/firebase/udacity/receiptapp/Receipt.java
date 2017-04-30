@@ -188,11 +188,11 @@ public class Receipt extends Object implements Serializable {
             //check for null
             if (add != null) {
                 //Get latLng from String
-                LatLng mLatLong = new LatLng(add.getLatitude(), add.getLongitude());
+                this.mLatLong = new LatLng(add.getLatitude(), add.getLongitude());
             }
         }
-        System.out.println(mLatLong);
-        return mLatLong;
+        //System.out.println(mLatLong);
+        return this.mLatLong;
     }
 
 }
