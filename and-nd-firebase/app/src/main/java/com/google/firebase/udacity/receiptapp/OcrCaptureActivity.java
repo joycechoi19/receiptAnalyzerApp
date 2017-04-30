@@ -538,7 +538,7 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         String addr = storeAddress.getText().toString();
         Double cost = Double.parseDouble(totalCost.getText().toString());
 
-        return new Receipt(date, name, addr, cost);
+        return new Receipt(date, name, addr, cost, this.getApplicationContext());
     }
 
     /**

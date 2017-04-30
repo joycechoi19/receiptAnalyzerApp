@@ -34,7 +34,7 @@ public class Receipt implements Serializable {
     private String mAddr;
     private Double mAmount;
     public static LatLng mLatLng;
-    private Context context;
+    //private Context context;
 
 
     /**
@@ -52,8 +52,8 @@ public class Receipt implements Serializable {
      * @param store   Store name
      * @param amount  Amount of money spent
      */
-    Receipt(String date, String store, Double amount) throws IOException {
-        this(date, store, "na", amount);
+    Receipt(String date, String store, Double amount, Context context) throws IOException {
+        this(date, store, "na", amount, context);
     }
 
     /**
@@ -63,12 +63,12 @@ public class Receipt implements Serializable {
      * @param addr    Store address
      * @param amount  Amount of money spent
      */
-    Receipt(String date, String store, String addr, Double amount) throws IOException {
+    Receipt(String date, String store, String addr, Double amount, Context context) throws IOException {
         this.mDate = date;
         this.mStore = store;
         this.mAddr = addr;
         this.mAmount = amount;
-        this.mLatLng = getLocationFromAddress(mAddr);
+        this.mLatLng = getLocationFromAddress(mAddr, context);
     }
 
     /**
@@ -83,6 +83,7 @@ public class Receipt implements Serializable {
         ret.put("store", mStore);
         ret.put("addr", mAddr);
         ret.put("amount", mAmount);
+        Log.d("hello", "receipt!");
         return ret;
     }
 
@@ -153,18 +154,22 @@ public class Receipt implements Serializable {
      *
      * @param strAddress String address of store
      */
-    public LatLng getLocationFromAddress(String strAddress) throws IOException {
+    public LatLng getLocationFromAddress(String strAddress, Context context) throws IOException {
         //Create coder with Activity context - this
         Geocoder geocoder = new Geocoder(context);
         ArrayList<Address> address = (ArrayList<Address>) geocoder.getFromLocationName(strAddress, 1);
-        if (address != null) {
+        Log.d("hello", "class");
+        if (address != null && address.size() > 0) {
             Address add = address.get(0);
             if (add != null) {
+                Log.d("hello", "not null");
                 //get latLng from String
                 this.mLatLng = new LatLng(add.getLatitude(), add.getLongitude());
-            } else {
-                this.mLatLng = new LatLng(-33.852, 151.211);
             }
+        }
+        else {
+            Log.d("hello", "null");
+            this.mLatLng = new LatLng(-33.852, 151.211);
         }
 //        for (Address add : address) {
 //            //check for null
