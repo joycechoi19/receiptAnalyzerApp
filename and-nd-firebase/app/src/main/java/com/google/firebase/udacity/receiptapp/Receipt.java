@@ -1,8 +1,21 @@
 package com.google.firebase.udacity.receiptapp;
 
+import com.google.android.gms.maps.model.LatLng;
+
+import java.io.IOException;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import android.content.Context;
+import android.location.Geocoder;
+import android.location.Address;
+import android.util.Log;
+
+import java.util.Locale;
+
+
 
 /**
  * Created by helen on 4/9/17.
@@ -20,6 +33,9 @@ public class Receipt implements Serializable {
     private String mStore;
     private String mAddr;
     private Double mAmount;
+    public static LatLng mLatLng;
+    //private Context context;
+
 
     /**
      * Default class constructor is required in order to enable
@@ -36,8 +52,8 @@ public class Receipt implements Serializable {
      * @param store   Store name
      * @param amount  Amount of money spent
      */
-    Receipt(String date, String store, Double amount) {
-        this(date, store, "na", amount);
+    Receipt(String date, String store, Double amount, Context context) throws IOException {
+        this(date, store, "na", amount, context);
     }
 
     /**
@@ -47,11 +63,12 @@ public class Receipt implements Serializable {
      * @param addr    Store address
      * @param amount  Amount of money spent
      */
-    Receipt(String date, String store, String addr, Double amount) {
+    Receipt(String date, String store, String addr, Double amount, Context context) throws IOException {
         this.mDate = date;
         this.mStore = store;
         this.mAddr = addr;
         this.mAmount = amount;
+        this.mLatLng = getLocationFromAddress(mAddr, context);
     }
 
     /**
@@ -66,6 +83,7 @@ public class Receipt implements Serializable {
         ret.put("store", mStore);
         ret.put("addr", mAddr);
         ret.put("amount", mAmount);
+        Log.d("hello", "receipt!");
         return ret;
     }
 
@@ -130,4 +148,42 @@ public class Receipt implements Serializable {
      * @param addr   String address of store
      */
     public void setAddr(String addr) { this.mAddr = addr; }
+    /**
+     * returns LatLng
+     *
+     *
+     * @param strAddress String address of store
+     */
+    public LatLng getLocationFromAddress(String strAddress, Context context) throws IOException {
+        //Create coder with Activity context - this
+        Geocoder geocoder = new Geocoder(context);
+        ArrayList<Address> address = (ArrayList<Address>) geocoder.getFromLocationName(strAddress, 1);
+        Log.d("hello", "class");
+        if (address != null && address.size() > 0) {
+            Address add = address.get(0);
+            if (add != null) {
+                Log.d("hello", "not null");
+                //get latLng from String
+                this.mLatLng = new LatLng(add.getLatitude(), add.getLongitude());
+            }
+        }
+        else {
+            Log.d("hello", "null");
+            //this.mLatLng = new LatLng(-33.852, 151.211);
+            this.mLatLng = null;
+
+        }
+//        for (Address add : address) {
+//            //check for null
+//            if (add != null) {
+//                //Get latLng from String
+//                this.mLatLng = new LatLng(add.getLatitude(), add.getLongitude());
+//            }
+//            else{
+//                this.mLatLng = new LatLng(-33.852, 151.211);
+//            }
+//        }
+        //System.out.println(mLatLng);
+        return this.mLatLng;
+    }
 }

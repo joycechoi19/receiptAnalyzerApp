@@ -6,6 +6,7 @@ package com.google.firebase.udacity.receiptapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -45,10 +46,14 @@ public class MapsMarkerActivity extends AppCompatActivity
     public void onMapReady(GoogleMap googleMap) {
         // Add a marker in Sydney, Australia,
         // and move the map's camera to the same location.
-        LatLng sydney = new LatLng(-33.852, 151.211);
-        googleMap.addMarker(new MarkerOptions().position(sydney)
-                .title("Marker in Sydney"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        //LatLng sydney = new LatLng(-33.852, 151.211);
+        LatLng here = Receipt.mLatLng;
+        if (here != null) {
+            Log.d("hello", here.toString());
+            googleMap.addMarker(new MarkerOptions().position(here)
+                    .title("Current Location"));
+            googleMap.moveCamera(CameraUpdateFactory.newLatLng(here));
+        }
     }
 }
 
