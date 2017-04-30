@@ -48,10 +48,12 @@ public class MapsMarkerActivity extends AppCompatActivity
         // and move the map's camera to the same location.
         //LatLng sydney = new LatLng(-33.852, 151.211);
         LatLng here = Receipt.mLatLng;
-        Log.d("hello", here.toString());
-        googleMap.addMarker(new MarkerOptions().position(here)
-                .title("Current Location"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(here));
+        if (here != null) {
+            Log.d("hello", here.toString());
+            googleMap.addMarker(new MarkerOptions().position(here)
+                    .title("Current Location"));
+            googleMap.moveCamera(CameraUpdateFactory.newLatLng(here));
+        }
     }
 }
 

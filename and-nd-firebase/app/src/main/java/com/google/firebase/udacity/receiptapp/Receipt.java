@@ -169,7 +169,9 @@ public class Receipt implements Serializable {
         }
         else {
             Log.d("hello", "null");
-            this.mLatLng = new LatLng(-33.852, 151.211);
+            //this.mLatLng = new LatLng(-33.852, 151.211);
+            this.mLatLng = null;
+
         }
 //        for (Address add : address) {
 //            //check for null
