@@ -502,7 +502,7 @@ public final class OcrCaptureActivity extends AppCompatActivity {
      * After pushing the data, the method returns to BoxActivity.
      * @param v  the current View that is being displayed
      */
-    public void onClicker(View v){
+    public void onClicker(View v) throws IOException {
         int validate = validateReceipt();
         if(validate < 0) {
             return;
@@ -532,7 +532,7 @@ public final class OcrCaptureActivity extends AppCompatActivity {
      * @param r   the ArrayList from the editing screen
      * @return    a Receipt object generated from the ArrayList
      */
-    Receipt processReceipt(ArrayList<String> r) {
+    Receipt processReceipt(ArrayList<String> r) throws IOException {
         String name = storeName.getText().toString();
         String date = storeDate.getText().toString();
         String addr = storeAddress.getText().toString();
