@@ -117,11 +117,13 @@ public class ReceiptFragment extends Fragment {
         TextView mDateView = (TextView) rootView.findViewById(R.id.text_receipt_date);
         TextView mStoreView = (TextView) rootView.findViewById(R.id.text_receipt_store);
         TextView mAmountView = (TextView) rootView.findViewById(R.id.text_receipt_amount);
+        TextView mInstructions = (TextView) rootView.findViewById(R.id.text_instructions);
         Button mLocationBttn = (Button) rootView.findViewById(R.id.mapButton);
 
         mDateView.setText(mDate);
         mStoreView.setText(mStore);
         mAmountView.setText(mAmount);
+        mInstructions.setText("Swipe down to get rid of this card.");
 
         mFragment = this;
 
