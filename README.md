@@ -14,6 +14,9 @@ Our app aims to do 2 things:
   * ~~integrated API, created "editing screen"~~
   * Transfer tapped text on screen to "editing screen", help move tapped text to database
 * **Stephanie**
+   * Splash screen
+   * Maps integration (address to lat, long)
+   * UI tweaks
 * **Joyce**
   * ~~Created user registration, login, and logout using Firebase.~~
   * Will start working on Maps integration
