@@ -29,12 +29,14 @@
             android:layout_height="wrap_content"
             android:text="@string/text_auto_focus"
             android:id="@+id/auto_focus"
-            android:checked="true" />
+            android:checked="true"
+            android:buttonTint="#B8E986"/>
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_use_flash"
             android:id="@+id/use_flash"
+            android:buttonTint="#B8E986"
             android:checked="false" />
     </LinearLayout>
 
@@ -45,7 +47,12 @@
         android:id="@+id/read_text"
         android:onClick="onClick"
         android:layout_gravity="center"
-        style="@style/Widget.AppCompat.Button.Colored" />
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:fontFamily="sans-serif"
+        android:background="#B8E986"
+        android:textColor="@android:color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
 
 
 

@@ -13,12 +13,15 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginTop="15dp"
         android:gravity="center"
+        android:textColor="#000000"
         android:text="@string/text_instruction"
         android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
     <com.google.firebase.udacity.receiptapp.ui.camera.CameraSourcePreview
         android:id="@+id/preview"
+        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="485dp">
 
@@ -34,9 +37,11 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_gravity="center"
+        android:layout_marginTop="25dp"
         android:onClick="onButtonClick"
         android:text="@string/button_done_camera"
+        android:background="#B8E986"
+        android:textColor="@android:color/white"
         style="@style/Widget.AppCompat.Button.Colored"/>
-
 
 </LinearLayout>

@@ -9,12 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardUseCompatPadding="true"
-        card_view:cardCornerRadius="4dp">
+        card_view:cardCornerRadius="4dp"
+        >
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="30sp">
+            android:padding="30sp"
+            android:background="#B8E986">
 
             <TextView
                 android:id="@+id/text_receipt_store"
