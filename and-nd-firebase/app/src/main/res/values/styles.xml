@@ -1,32 +1,41 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="@android:style/Theme.Holo.Light">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:colorButtonNormal">@drawable/button_selector</item>
-        <item name="colorButtonNormal">@drawable/button_selector</item>
-        <item name="android:buttonStyle">@style/FriendlyButtonStyle</item>
-        <item name="android:actionBarStyle">@style/MyActionBarTheme</item>
-
-    </style>
-
-    <style name="MyActionBarTheme" parent="@android:style/Widget.Holo.Light.ActionBar">
-        <item name="android:background">#B8E986</item>
-    </style>
-
-
-    <style name="FriendlyButtonStyle" parent="Widget.AppCompat.Button">
-        <item name="android:textColor">@color/colorTitle</item>
-
-    </style>
     <style name="FirebaseLoginTheme" parent="FirebaseUI">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowBackground">@drawable/login</item>
+
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
     </style>
+
+    <style name="ReceiptTheme" parent="Theme.AppCompat.NoActionBar" >
+
+        <item name="android:buttonStyle">@style/ButtonColor</item>
+
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+
+        <item name="android:textColorPrimary">@color/primaryText</item>
+        <item name="android:textColorPrimaryInverse">@color/primaryText</item>
+        <item name="android:textColorSecondary">@color/secondaryText</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- change app title color -->
+        <item name="android:textColorPrimary">@color/textTitle</item>
+        <!-- changes context menu text color -->
+        <item name="android:textColor">@color/primaryText</item>
+        <!-- change overflow icon (three dots) color -->
+        <item name="android:textColorSecondary">@color/textTitle</item>
+    </style>
+
+    <style name="ButtonColor" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="android:textColor">@color/textTitle</item>
+    </style>
+
 </resources>
