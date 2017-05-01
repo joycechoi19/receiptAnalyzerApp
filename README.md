@@ -19,4 +19,4 @@ Our app aims to do 2 things:
    * ~~UI tweaks~~
 * **Joyce**
   * ~~Created user registration, login, and logout using Firebase.~~
-  * ~~Integrated Google Maps View
+  * ~~Integrated Google Maps View~~
