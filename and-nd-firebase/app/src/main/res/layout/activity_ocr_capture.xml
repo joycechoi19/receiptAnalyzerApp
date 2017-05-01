@@ -15,7 +15,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="15dp"
         android:gravity="center"
-        android:textColor="#000000"
+        android:textColor="@color/primaryText"
         android:text="@string/text_instruction"
         android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
@@ -40,8 +40,6 @@
         android:layout_marginTop="25dp"
         android:onClick="onButtonClick"
         android:text="@string/button_done_camera"
-        android:background="#B8E986"
-        android:textColor="@android:color/white"
-        style="@style/Widget.AppCompat.Button.Colored"/>
+        style="@style/ButtonColor"/>
 
 </LinearLayout>

@@ -137,7 +137,7 @@ implements BoxAdapter.OnChoiceSelectedListener {
         // replace add receipt button with pretty icon
         menu.findItem(R.id.action_add_receipt).setIcon(
                 new IconDrawable(this, MaterialIcons.md_add)
-                        .actionBarSize());
+                        .actionBarSize().color(getColor(R.color.textTitle)));
         return true;
     }
 
