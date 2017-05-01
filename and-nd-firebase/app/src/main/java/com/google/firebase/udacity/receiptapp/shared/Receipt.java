@@ -154,12 +154,11 @@ public class Receipt implements Serializable {
      */
     public void setAddr(String addr) { this.mAddr = addr; }
     /**
-     * Takes in a String address and returns the nearest coordinates
-     * to be used when offering gps functionality for the receipt.
-     * Returns a null value if invalid address input
+     * returns LatLng using geocoder
+     *
      *
      * @param strAddress String address of store
-     * @return LatLng    coords to be used for geolocation via gps
+     * @param context context of the activity
      */
     public LatLng getLocationFromAddress(String strAddress, Context context) throws IOException {
         //Create coder with Activity context - this
