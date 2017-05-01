@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
  */
 
-package com.google.firebase.udacity.receiptapp;
+package com.google.firebase.udacity.receiptapp.features.capture;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -34,14 +34,11 @@ import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -51,6 +48,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.udacity.receiptapp.R;
+import com.google.firebase.udacity.receiptapp.features.receiptbox.BoxActivity;
+import com.google.firebase.udacity.receiptapp.shared.Receipt;
 import com.google.firebase.udacity.receiptapp.ui.camera.CameraSource;
 import com.google.firebase.udacity.receiptapp.ui.camera.CameraSourcePreview;
 import com.google.firebase.udacity.receiptapp.ui.camera.GraphicOverlay;
@@ -58,14 +58,13 @@ import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
 
 import java.io.IOException;
-import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-import static com.google.firebase.udacity.receiptapp.BoxActivity.sRECEIPTS;
-import static com.google.firebase.udacity.receiptapp.BoxActivity.sUSERS;
+import static com.google.firebase.udacity.receiptapp.features.receiptbox.BoxActivity.sRECEIPTS;
+import static com.google.firebase.udacity.receiptapp.features.receiptbox.BoxActivity.sUSERS;
 
 
 /**
@@ -85,7 +84,6 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     private EditText storeDate;
     private EditText storeAddress;
     private EditText totalCost;
-    private Button mSaveReceipt;
 
     // Permission request codes need to be < 256
     private static final int RC_HANDLE_CAMERA_PERM = 2;
@@ -475,7 +473,6 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         storeDate = (EditText) findViewById(R.id.store_date);
         storeAddress = (EditText) findViewById(R.id.store_address);
         totalCost = (EditText) findViewById(R.id.total_cost);
-        mSaveReceipt = (Button) findViewById(R.id.button_save);
 
         if (receipt.size() == 1) {
             storeName.setText(receipt.get(0));

@@ -1,4 +1,4 @@
-package com.google.firebase.udacity.receiptapp;
+package com.google.firebase.udacity.receiptapp.features.capture;
 /*
  * Copyright (C) The Android Open Source Project
  *
@@ -30,7 +30,7 @@ import java.util.List;
  * Graphic instance for rendering TextBlock position, size, and ID within an associated graphic
  * overlay view.
  */
-public class OcrGraphic extends GraphicOverlay.Graphic {
+class OcrGraphic extends GraphicOverlay.Graphic {
 
     private int mId;
 

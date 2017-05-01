@@ -1,4 +1,4 @@
-package com.google.firebase.udacity.receiptapp;
+package com.google.firebase.udacity.receiptapp.features.capture;
 
 /*
  * Copyright (C) The Android Open Source Project
@@ -25,6 +25,7 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.google.android.gms.common.api.CommonStatusCodes;
+import com.google.firebase.udacity.receiptapp.R;
 
 
 /**

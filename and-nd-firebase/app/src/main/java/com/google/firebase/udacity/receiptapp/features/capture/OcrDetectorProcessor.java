@@ -1,4 +1,4 @@
-package com.google.firebase.udacity.receiptapp;
+package com.google.firebase.udacity.receiptapp.features.capture;
 
 /*
  * Copyright (C) The Android Open Source Project
@@ -17,7 +17,7 @@ package com.google.firebase.udacity.receiptapp;
  */
 
 import android.util.SparseArray;
-import java.util.ArrayList;
+
 import com.google.firebase.udacity.receiptapp.ui.camera.GraphicOverlay;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.text.TextBlock;

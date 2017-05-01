@@ -15,7 +15,7 @@
  *
  * Modified for receiptAnalyzer
  */
-package com.google.firebase.udacity.receiptapp;
+package com.google.firebase.udacity.receiptapp.app;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,6 +27,8 @@ import android.widget.Toast;
 import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.udacity.receiptapp.R;
+import com.google.firebase.udacity.receiptapp.features.receiptbox.BoxActivity;
 
 public class MainActivity extends AppCompatActivity {
 

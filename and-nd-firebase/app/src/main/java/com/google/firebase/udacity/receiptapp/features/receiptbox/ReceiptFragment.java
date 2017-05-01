@@ -1,4 +1,4 @@
-package com.google.firebase.udacity.receiptapp;
+package com.google.firebase.udacity.receiptapp.features.receiptbox;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -12,9 +12,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.text.NumberFormat;
+import com.google.firebase.udacity.receiptapp.R;
+import com.google.firebase.udacity.receiptapp.shared.Receipt;
 
-import static com.google.firebase.udacity.receiptapp.BoxActivity.sRECEIPT;
+import java.text.NumberFormat;
 
 /**
  * Created by helen on 4/20/17.
@@ -24,6 +25,7 @@ import static com.google.firebase.udacity.receiptapp.BoxActivity.sRECEIPT;
 
 public class ReceiptFragment extends Fragment {
 
+    public static final String sRECEIPTFRAGMENT = "com.google.firebase.udacity.receiptapp.features.receipt";
     private static final String DEBUG_TAG = "Gestures";
     private GestureDetector mDetector;
 
@@ -91,7 +93,7 @@ public class ReceiptFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         NumberFormat mCurFormat = NumberFormat.getCurrencyInstance();
-        mReceipt = (Receipt) getArguments().getSerializable(sRECEIPT);
+        mReceipt = (Receipt) getArguments().getSerializable(BoxActivity.sRECEIPT);
         mStore = mReceipt.getStore();
         mDate = mReceipt.getDate();
         mAmount = mCurFormat.format(mReceipt.getAmount());
@@ -137,7 +139,11 @@ public class ReceiptFragment extends Fragment {
         mLocationBttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(v.getContext(), MapsMarkerActivity.class));
+                Bundle bundle = new Bundle();
+                bundle.putSerializable(sRECEIPTFRAGMENT, mReceipt);
+                Intent i = new Intent(v.getContext(), MapsMarkerActivity.class);
+                i.putExtras(bundle);
+                startActivity(i);
             }
         });
 

@@ -1,4 +1,4 @@
-package com.google.firebase.udacity.receiptapp;
+package com.google.firebase.udacity.receiptapp.features.receiptbox;
 
 import android.app.FragmentTransaction;
 import android.content.Intent;
@@ -20,6 +20,10 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.udacity.receiptapp.app.MainActivity;
+import com.google.firebase.udacity.receiptapp.features.capture.PreReaderActivity;
+import com.google.firebase.udacity.receiptapp.R;
+import com.google.firebase.udacity.receiptapp.shared.Receipt;
 import com.joanzapata.iconify.IconDrawable;
 import com.joanzapata.iconify.fonts.MaterialIcons;
 
@@ -36,9 +40,9 @@ public class BoxActivity extends AppCompatActivity
 implements BoxAdapter.OnChoiceSelectedListener {
 
     private static final String TAG = "BoxActivity";
-    static final String sRECEIPTS = "receipts";
-    static final String sUSERS = "users";
-    static final String sRECEIPT = "com.google.firebase.udacity.receiptapp.BoxActivity.sRECEIPT";
+    public static final String sRECEIPTS = "receipts";
+    public static final String sUSERS = "users";
+    public static final String sRECEIPT = "com.google.firebase.udacity.receiptapp.features.receiptbox.BoxActivity.sRECEIPT";
 
     private ArrayList<Receipt> mReceiptList;
     private FirebaseAuth mFirebaseAuth;

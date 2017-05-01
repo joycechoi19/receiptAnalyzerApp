@@ -7,7 +7,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context="com.google.firebase.udacity.receiptapp.PreReaderActivity">
+    tools:context="com.google.firebase.udacity.receiptapp.features.capture.PreReaderActivity">
 
     <TextView
         android:id="@+id/status_message"

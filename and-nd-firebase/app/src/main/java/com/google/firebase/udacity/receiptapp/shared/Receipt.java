@@ -1,4 +1,4 @@
-package com.google.firebase.udacity.receiptapp;
+package com.google.firebase.udacity.receiptapp.shared;
 
 import com.google.android.gms.maps.model.LatLng;
 
@@ -33,8 +33,7 @@ public class Receipt implements Serializable {
     private String mStore;
     private String mAddr;
     private Double mAmount;
-    public static LatLng mLatLng;
-    //private Context context;
+    private LatLng mLatLng;
 
 
     /**
@@ -42,7 +41,7 @@ public class Receipt implements Serializable {
      * serialization back from Object to Receipt when retrieving
      * data from Firebase realtime database
      */
-    Receipt() {}
+    public Receipt() {}
 
     /**
      * Class constructor calls the default with a not-available "na"
@@ -52,7 +51,7 @@ public class Receipt implements Serializable {
      * @param store   Store name
      * @param amount  Amount of money spent
      */
-    Receipt(String date, String store, Double amount, Context context) throws IOException {
+    public Receipt(String date, String store, Double amount, Context context) throws IOException {
         this(date, store, "na", amount, context);
     }
 
@@ -63,7 +62,7 @@ public class Receipt implements Serializable {
      * @param addr    Store address
      * @param amount  Amount of money spent
      */
-    Receipt(String date, String store, String addr, Double amount, Context context) throws IOException {
+    public Receipt(String date, String store, String addr, Double amount, Context context) throws IOException {
         this.mDate = date;
         this.mStore = store;
         this.mAddr = addr;
@@ -122,6 +121,12 @@ public class Receipt implements Serializable {
     public String getAddr() { return mAddr; }
 
     /**
+     * getter method offers access to private variable mLatLng
+     * @return mLatLng
+     */
+    public LatLng getLatLng() { return mLatLng; }
+
+    /**
      * setter method enables serialization from Object to Receipt
      * when retrieved from Firebase realtime database
      * @param store  String store name
@@ -149,10 +154,12 @@ public class Receipt implements Serializable {
      */
     public void setAddr(String addr) { this.mAddr = addr; }
     /**
-     * returns LatLng
-     *
+     * Takes in a String address and returns the nearest coordinates
+     * to be used when offering gps functionality for the receipt.
+     * Returns a null value if invalid address input
      *
      * @param strAddress String address of store
+     * @return LatLng    coords to be used for geolocation via gps
      */
     public LatLng getLocationFromAddress(String strAddress, Context context) throws IOException {
         //Create coder with Activity context - this
@@ -173,17 +180,6 @@ public class Receipt implements Serializable {
             this.mLatLng = null;
 
         }
-//        for (Address add : address) {
-//            //check for null
-//            if (add != null) {
-//                //Get latLng from String
-//                this.mLatLng = new LatLng(add.getLatitude(), add.getLongitude());
-//            }
-//            else{
-//                this.mLatLng = new LatLng(-33.852, 151.211);
-//            }
-//        }
-        //System.out.println(mLatLng);
         return this.mLatLng;
     }
 }

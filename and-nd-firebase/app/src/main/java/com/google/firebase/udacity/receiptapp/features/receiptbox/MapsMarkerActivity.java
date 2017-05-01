@@ -1,9 +1,10 @@
-package com.google.firebase.udacity.receiptapp;
+package com.google.firebase.udacity.receiptapp.features.receiptbox;
 
 /**
  * Created by joycechoi on 4/28/17.
  */
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -14,6 +15,11 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.udacity.receiptapp.R;
+import com.google.firebase.udacity.receiptapp.shared.Receipt;
+
+
+import static com.google.firebase.udacity.receiptapp.features.receiptbox.ReceiptFragment.sRECEIPTFRAGMENT;
 
 /**
  * An activity that displays a Google map with a marker (pin) to indicate a particular location.
@@ -21,9 +27,15 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapsMarkerActivity extends AppCompatActivity
         implements OnMapReadyCallback {
 
+    private Receipt mReceipt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // retrieve receipt from intent that started this activity
+        Intent i = this.getIntent();
+        Bundle bundle = i.getExtras();
+        mReceipt = (Receipt) bundle.getSerializable(sRECEIPTFRAGMENT);
         // Retrieve the content view that renders the map.
         setContentView(R.layout.activity_maps);
         // Get the SupportMapFragment and request notification
@@ -47,7 +59,7 @@ public class MapsMarkerActivity extends AppCompatActivity
         // Add a marker in Sydney, Australia,
         // and move the map's camera to the same location.
         //LatLng sydney = new LatLng(-33.852, 151.211);
-        LatLng here = Receipt.mLatLng;
+        LatLng here = mReceipt.getLatLng();
         if (here != null) {
             Log.d("hello", here.toString());
             googleMap.addMarker(new MarkerOptions().position(here)
