@@ -149,10 +149,11 @@ public class Receipt implements Serializable {
      */
     public void setAddr(String addr) { this.mAddr = addr; }
     /**
-     * returns LatLng
+     * returns LatLng using geocoder
      *
      *
      * @param strAddress String address of store
+     * @param context context of the activity
      */
     public LatLng getLocationFromAddress(String strAddress, Context context) throws IOException {
         //Create coder with Activity context - this
