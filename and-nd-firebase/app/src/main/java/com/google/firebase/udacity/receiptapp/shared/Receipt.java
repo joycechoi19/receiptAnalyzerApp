@@ -29,11 +29,14 @@ import java.util.Locale;
 
 public class Receipt implements Serializable {
 
+    private static final String TAG = "Receipt";
+
     private String mDate;
     private String mStore;
     private String mAddr;
     private Double mAmount;
-    private LatLng mLatLng;
+    private Double mLongitude;
+    private Double mLatitude;
 
 
     /**
@@ -51,8 +54,8 @@ public class Receipt implements Serializable {
      * @param store   Store name
      * @param amount  Amount of money spent
      */
-    public Receipt(String date, String store, Double amount, Context context) throws IOException {
-        this(date, store, "na", amount, context);
+    public Receipt(String date, String store, Double amount, Double longitude, Double latitude) throws IOException {
+        this(date, store, "na", amount, longitude, latitude);
     }
 
     /**
@@ -62,12 +65,13 @@ public class Receipt implements Serializable {
      * @param addr    Store address
      * @param amount  Amount of money spent
      */
-    public Receipt(String date, String store, String addr, Double amount, Context context) throws IOException {
+    public Receipt(String date, String store, String addr, Double amount, Double longitude, Double latitude) throws IOException {
         this.mDate = date;
         this.mStore = store;
         this.mAddr = addr;
         this.mAmount = amount;
-        this.mLatLng = getLocationFromAddress(mAddr, context);
+        this.mLongitude = longitude;
+        this.mLatitude = latitude;
     }
 
     /**
@@ -82,7 +86,8 @@ public class Receipt implements Serializable {
         ret.put("store", mStore);
         ret.put("addr", mAddr);
         ret.put("amount", mAmount);
-        Log.d("hello", "receipt!");
+        ret.put("longitude", mLongitude);
+        ret.put("latitude", mLatitude);
         return ret;
     }
 
@@ -120,11 +125,13 @@ public class Receipt implements Serializable {
      */
     public String getAddr() { return mAddr; }
 
+    public Double getLongitude() { return mLongitude; }
+
     /**
-     * getter method offers access to private variable mLatLng
-     * @return mLatLng
+     * getter method offers access to private variable mLatitude
+     * @return mLatitude
      */
-    public LatLng getLatLng() { return mLatLng; }
+    public Double getLatitude() { return mLatitude; }
 
     /**
      * setter method enables serialization from Object to Receipt
@@ -153,32 +160,6 @@ public class Receipt implements Serializable {
      * @param addr   String address of store
      */
     public void setAddr(String addr) { this.mAddr = addr; }
-    /**
-     * returns LatLng using geocoder
-     *
-     *
-     * @param strAddress String address of store
-     * @param context context of the activity
-     */
-    public LatLng getLocationFromAddress(String strAddress, Context context) throws IOException {
-        //Create coder with Activity context - this
-        Geocoder geocoder = new Geocoder(context);
-        ArrayList<Address> address = (ArrayList<Address>) geocoder.getFromLocationName(strAddress, 1);
-        Log.d("hello", "class");
-        if (address != null && address.size() > 0) {
-            Address add = address.get(0);
-            if (add != null) {
-                Log.d("hello", "not null");
-                //get latLng from String
-                this.mLatLng = new LatLng(add.getLatitude(), add.getLongitude());
-            }
-        }
-        else {
-            Log.d("hello", "null");
-            //this.mLatLng = new LatLng(-33.852, 151.211);
-            this.mLatLng = null;
-
-        }
-        return this.mLatLng;
-    }
+    public void setLongitude(Double longitude) { this.mLongitude = longitude; }
+    public void setLatitude(Double latitude) { this.mLatitude = latitude; }
 }

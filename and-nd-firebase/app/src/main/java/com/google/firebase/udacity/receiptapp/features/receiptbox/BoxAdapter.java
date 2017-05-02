@@ -164,7 +164,6 @@ class BoxAdapter extends RecyclerView.Adapter<BoxAdapter.ViewHolder> {
      */
     @Override
     public int getItemViewType(int position) {
-        Log.d(TAG, "dataset size in getItemviewType is " + Integer.toString(mReceiptList.size()));
         if(mReceiptList.size() == 0) {
             return -1;
         } else {

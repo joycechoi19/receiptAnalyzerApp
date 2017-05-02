@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Receipt Analyzer</string>
     <string name="action_add_receipt">Add Receipt</string>
+    <string name="action_return">Back</string>
     <string name="action_sign_out">Sign Out</string>
     <string name="error_receipt_date">Please enter a valid date</string>
     <string name="error_receipt_store">Please enter a store name</string>

@@ -27,6 +27,8 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
@@ -44,6 +46,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.maps.model.LatLng;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -534,8 +537,11 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         String date = storeDate.getText().toString();
         String addr = storeAddress.getText().toString();
         Double cost = Double.parseDouble(totalCost.getText().toString());
-
-        return new Receipt(date, name, addr, cost, this.getApplicationContext());
+        ArrayList<Double> latlng = getLocationFromAddress(addr, getApplicationContext());
+        if (latlng == null && latlng.size() == 0) {
+            return new Receipt(date, name, addr, cost, 0.0, 0.0);
+        }
+        return new Receipt(date, name, addr, cost, latlng.get(0), latlng.get(1));
     }
 
     /**
@@ -561,6 +567,36 @@ public final class OcrCaptureActivity extends AppCompatActivity {
             TextInputLayout layout = (TextInputLayout) findViewById(R.id.input_layout_amount);
             layout.setError(getString(R.string.error_receipt_amount));
             ret = -1;
+        }
+        return ret;
+    }
+    /**
+     * returns LatLng using geocoder
+     *
+     *
+     * @param addr    String address of store
+     * @param context Context of the activity
+     * @return ret    LatLng object, null if invalid address
+     */
+    public ArrayList<Double> getLocationFromAddress(String addr, Context context) throws IOException {
+        ArrayList<Double> ret = new ArrayList<>();
+        //Create coder with Activity context - this
+        Geocoder geocoder = new Geocoder(context);
+        ArrayList<Address> address = (ArrayList<Address>) geocoder.getFromLocationName(addr, 1);
+        Log.d(TAG, "calling getLocationFromAddress");
+        if (address != null && address.size() > 0) {
+            Address add = address.get(0);
+            if (add != null) {
+                //get latLng from String
+                ret.add(add.getLongitude());
+                ret.add(add.getLatitude());
+                Log.d(TAG, "LatLng :" + ret.toString());
+                return ret;
+            }
+        }
+        else {
+            Log.d(TAG, "null LatLng");
+            ret = null;
         }
         return ret;
     }
