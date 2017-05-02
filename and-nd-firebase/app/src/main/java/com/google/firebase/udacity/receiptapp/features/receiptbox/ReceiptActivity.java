@@ -127,7 +127,7 @@ public class ReceiptActivity extends AppCompatActivity implements OnMapReadyCall
         // and move map's camera to same location.
         Double longitude = mReceipt.getLongitude();
         Double latitude = mReceipt.getLatitude();
-        LatLng here = new LatLng(longitude, latitude);
+        LatLng here = new LatLng(latitude, longitude);
         if (here != null) {
             Log.d(TAG, here.toString());
             googleMap.addMarker(new MarkerOptions().position(here)
