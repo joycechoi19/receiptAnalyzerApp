@@ -2,7 +2,6 @@ package com.google.firebase.udacity.receiptapp.features.receiptbox;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.BottomSheetBehavior;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -34,7 +33,6 @@ public class ReceiptActivity extends AppCompatActivity implements OnMapReadyCall
 
     private static final String TAG = "ReceiptActivity";
     private static Receipt mReceipt;
-    private BottomSheetBehavior mSheetBehavior;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +48,6 @@ public class ReceiptActivity extends AppCompatActivity implements OnMapReadyCall
         String mStore = mReceipt.getStore();
         String mDate = mReceipt.getDate();
         String mAmount = mCurFormat.format(mReceipt.getAmount());
-        mSheetBehavior = BottomSheetBehavior.from(findViewById(R.id.bottomsheet_receipt));
-
-        // set height of bottom sheet
-//        mSheetBehavior.setPeekHeight(150);
 
         // populate fields in bottom sheet
         TextView mDateView = (TextView) findViewById(R.id.text_receipt_date);
@@ -73,6 +67,10 @@ public class ReceiptActivity extends AppCompatActivity implements OnMapReadyCall
         Log.d(TAG, mReceipt.getLatitude().toString());
     }
 
+    /**
+     * Registers our toolbar as a support action bar,
+     * which enables us to perform ui-related functions on it
+     */
     private void setupToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.menu_receipt);
         setSupportActionBar(toolbar);
@@ -94,6 +92,7 @@ public class ReceiptActivity extends AppCompatActivity implements OnMapReadyCall
         inflater.inflate(R.menu.collapsing_menu, menu);
         return true;
     }
+
     /**
      * Defines behavior for each menu item in the toolbar
      * @param item   each option item in the toolbar

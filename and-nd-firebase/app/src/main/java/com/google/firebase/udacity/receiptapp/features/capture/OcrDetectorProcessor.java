@@ -50,15 +50,6 @@ public class OcrDetectorProcessor implements Detector.Processor<TextBlock> {
             OcrGraphic graphic = new OcrGraphic(mGraphicOverlay, item);
             mGraphicOverlay.add(graphic);
         }
-//    }
-//    public void saveDetections(Detector.Detections<TextBlock> detections){
-//        mGraphicOverlay.clear();
-//        SparseArray<TextBlock> receiptText = detections.getDetectedItems();
-//        ArrayList<String> receipt = new ArrayList<>();
-//        for (int i = 0; i < items.size(); ++i){
-//            receipt.add(items.valueAt(i).toString());
-//        }
-//        System.out.println(receipt);
     }
 
     /**

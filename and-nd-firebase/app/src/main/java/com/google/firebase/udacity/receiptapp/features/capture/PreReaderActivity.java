@@ -45,7 +45,7 @@ public class PreReaderActivity extends Activity implements View.OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.preread_activity);
+        setContentView(R.layout.activity_preread);
 
         statusMessage = (TextView)findViewById(R.id.status_message);
         autoFocus = (CompoundButton) findViewById(R.id.auto_focus);
@@ -68,7 +68,6 @@ public class PreReaderActivity extends Activity implements View.OnClickListener 
             intent.putExtra(OcrCaptureActivity.UseFlash, useFlash.isChecked());
             Log.d(TAG, "clicked button");
             startActivity(intent);
-//            startActivityForResult(intent, RC_OCR_CAPTURE);
         }
         Log.d(TAG, "outside button");
     }

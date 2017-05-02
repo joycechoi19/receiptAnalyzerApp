@@ -1,20 +1,9 @@
 package com.google.firebase.udacity.receiptapp.shared;
 
-import com.google.android.gms.maps.model.LatLng;
-
 import java.io.IOException;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
-import android.content.Context;
-import android.location.Geocoder;
-import android.location.Address;
-import android.util.Log;
-
-import java.util.Locale;
-
 
 
 /**
@@ -125,11 +114,17 @@ public class Receipt implements Serializable {
      */
     public String getAddr() { return mAddr; }
 
+    /**
+     * getter method enables serialization from Receipt to Object
+     * to store in Firebase realtime database
+     * @return longitude of location captured
+     */
     public Double getLongitude() { return mLongitude; }
 
     /**
-     * getter method offers access to private variable mLatitude
-     * @return mLatitude
+     * getter method enables serialization from Receipt to Object
+     * to store in Firebase realtime database
+     * @return latitude of location captured
      */
     public Double getLatitude() { return mLatitude; }
 
@@ -160,6 +155,18 @@ public class Receipt implements Serializable {
      * @param addr   String address of store
      */
     public void setAddr(String addr) { this.mAddr = addr; }
+
+    /**
+     * setter method enables serialization from Object to Receipt
+     * when retrieved from Firebase realtime database
+     * @param longitude  Double longitude of location
+     */
     public void setLongitude(Double longitude) { this.mLongitude = longitude; }
+
+    /**
+     * setter method enables serialization from Object to Receipt
+     * when retrieved from Firebase realtime database
+     * @param latitude   Double latitude of location
+     */
     public void setLatitude(Double latitude) { this.mLatitude = latitude; }
 }

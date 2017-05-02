@@ -1,6 +1,5 @@
 package com.google.firebase.udacity.receiptapp.features.receiptbox;
 
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.UiThread;
