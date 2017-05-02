@@ -170,14 +170,12 @@ implements BoxAdapter.OnChoiceSelectedListener {
      */
     @Override
     public void onChoiceSelected(int index) {
-        FragmentTransaction fragTransaction = getFragmentManager().beginTransaction();
-        fragTransaction.setCustomAnimations(R.animator.anim_slide_up, R.animator.anim_slide_down);
-        ReceiptFragment mFragment = new ReceiptFragment();
         Bundle args = new Bundle();
         Receipt receipt = mReceiptList.get(index);
         args.putSerializable(sRECEIPT, receipt);
-        mFragment.setArguments(args);
-        fragTransaction.add(R.id.container_fragment_receipt, mFragment).commit();
+        Intent i = new Intent(getApplicationContext(), ReceiptActivity.class);
+        i.putExtras(args);
+        startActivity(i);
     }
 
     /**
@@ -191,7 +189,6 @@ implements BoxAdapter.OnChoiceSelectedListener {
         Receipt receipt = snapshot.getValue(Receipt.class);
         mReceiptList.add(receipt);
         Log.d(TAG, snapshot.getValue().toString());
-        Log.d(TAG, Integer.toString(mAdapter.getItemCount()));
         datasetChanged();
     }
 
