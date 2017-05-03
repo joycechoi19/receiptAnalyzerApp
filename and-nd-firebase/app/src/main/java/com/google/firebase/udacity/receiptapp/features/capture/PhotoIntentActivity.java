@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.VideoView;
 
 import com.google.firebase.udacity.receiptapp.R;
+import com.google.firebase.udacity.receiptapp.features.receiptbox.BoxActivity;
 
 import java.io.File;
 import java.io.IOException;
@@ -234,6 +235,14 @@ public class PhotoIntentActivity extends Activity {
 		mVideoView = (VideoView) findViewById(R.id.videoView1);
 		mImageBitmap = null;
 		mVideoUri = null;
+
+		Button returnBtn = (Button) findViewById(R.id.btnReturn);
+		returnBtn.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(v.getContext(), BoxActivity.class));
+			}
+		});
 
 		Button picBtn = (Button) findViewById(R.id.btnIntend);
 		setBtnListenerOrDisable(
