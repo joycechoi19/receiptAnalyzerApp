@@ -165,7 +165,6 @@ public class PhotoIntentActivity extends Activity {
 			default:
 				break;
 		} // switch
-
 		startActivityForResult(takePictureIntent, actionCode);
 	}
 
