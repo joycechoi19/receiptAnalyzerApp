@@ -193,13 +193,13 @@ public class PhotoIntentActivity extends Activity {
 
 	}
 
-	private void handleCameraVideo(Intent intent) {
-		mVideoUri = intent.getData();
-		mVideoView.setVideoURI(mVideoUri);
-		mImageBitmap = null;
-		mVideoView.setVisibility(View.VISIBLE);
-		mImageView.setVisibility(View.INVISIBLE);
-	}
+//	private void handleCameraVideo(Intent intent) {
+//		mVideoUri = intent.getData();
+////		mVideoView.setVideoURI(mVideoUri);
+//		mImageBitmap = null;
+//		mVideoView.setVisibility(View.VISIBLE);
+//		mImageView.setVisibility(View.INVISIBLE);
+//	}
 
 	Button.OnClickListener mTakePicOnClickListener =
 			new Button.OnClickListener() {
@@ -231,8 +231,6 @@ public class PhotoIntentActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.pic_thumbnail_gallery);
 
-		mImageView = (ImageView) findViewById(R.id.imageView1);
-		mVideoView = (VideoView) findViewById(R.id.videoView1);
 		mImageBitmap = null;
 		mVideoUri = null;
 
@@ -275,12 +273,6 @@ public class PhotoIntentActivity extends Activity {
 				break;
 			} // ACTION_TAKE_PHOTO_S
 
-			case ACTION_TAKE_VIDEO: {
-				if (resultCode == RESULT_OK) {
-					handleCameraVideo(data);
-				}
-				break;
-			} // ACTION_TAKE_VIDEO
 		} // switch
 	}
 
