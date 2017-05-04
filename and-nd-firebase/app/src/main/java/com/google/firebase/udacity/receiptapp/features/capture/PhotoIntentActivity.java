@@ -244,20 +244,6 @@ public class PhotoIntentActivity extends Activity {
 			}
 		});
 
-		Button picBtn = (Button) findViewById(R.id.btnIntend);
-		setBtnListenerOrDisable(
-				picBtn,
-				mTakePicOnClickListener,
-				MediaStore.ACTION_IMAGE_CAPTURE
-		);
-
-		Button picSBtn = (Button) findViewById(R.id.btnIntendS);
-		setBtnListenerOrDisable(
-				picSBtn,
-				mTakePicSOnClickListener,
-				MediaStore.ACTION_IMAGE_CAPTURE
-		);
-
 		Button vidBtn = (Button) findViewById(R.id.btnIntendV);
 		setBtnListenerOrDisable(
 				vidBtn,
