@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.google.firebase.udacity.receiptapp.R;
@@ -30,8 +31,6 @@ import java.util.List;
 
 public class PhotoIntentActivity extends Activity {
 
-	private static final int ACTION_TAKE_PHOTO_B = 1;
-	private static final int ACTION_TAKE_PHOTO_S = 2;
 	private static final int ACTION_TAKE_VIDEO = 3;
 
 	private static final String BITMAP_STORAGE_KEY = "viewbitmap";
@@ -143,32 +142,6 @@ public class PhotoIntentActivity extends Activity {
 		this.sendBroadcast(mediaScanIntent);
 	}
 
-	private void dispatchTakePictureIntent(int actionCode) {
-
-		Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
-		switch(actionCode) {
-			case ACTION_TAKE_PHOTO_B:
-				File f = null;
-
-				try {
-					f = setUpPhotoFile();
-					mCurrentPhotoPath = f.getAbsolutePath();
-					takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
-				} catch (IOException e) {
-					e.printStackTrace();
-					f = null;
-					mCurrentPhotoPath = null;
-				}
-				break;
-
-			default:
-				break;
-		} // switch
-
-		startActivityForResult(takePictureIntent, actionCode);
-	}
-
 	private void dispatchTakeVideoIntent() {
 		Intent takeVideoIntent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
 		startActivityForResult(takeVideoIntent, ACTION_TAKE_VIDEO);
@@ -193,30 +166,6 @@ public class PhotoIntentActivity extends Activity {
 
 	}
 
-//	private void handleCameraVideo(Intent intent) {
-//		mVideoUri = intent.getData();
-////		mVideoView.setVideoURI(mVideoUri);
-//		mImageBitmap = null;
-//		mVideoView.setVisibility(View.VISIBLE);
-//		mImageView.setVisibility(View.INVISIBLE);
-//	}
-
-	Button.OnClickListener mTakePicOnClickListener =
-			new Button.OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					dispatchTakePictureIntent(ACTION_TAKE_PHOTO_B);
-				}
-			};
-
-	Button.OnClickListener mTakePicSOnClickListener =
-			new Button.OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					dispatchTakePictureIntent(ACTION_TAKE_PHOTO_S);
-				}
-			};
-
 	Button.OnClickListener mTakeVidOnClickListener =
 			new Button.OnClickListener() {
 				@Override
@@ -238,6 +187,12 @@ public class PhotoIntentActivity extends Activity {
 		returnBtn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				Context context = getApplicationContext();
+				CharSequence text = "Your video has been saved! Check your video gallery on your phone.";
+				int duration = Toast.LENGTH_SHORT;
+
+				Toast toast = Toast.makeText(context, text, duration);
+				toast.show();
 				startActivity(new Intent(v.getContext(), BoxActivity.class));
 			}
 		});
@@ -256,25 +211,6 @@ public class PhotoIntentActivity extends Activity {
 		}
 	}
 
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		switch (requestCode) {
-			case ACTION_TAKE_PHOTO_B: {
-				if (resultCode == RESULT_OK) {
-					handleBigCameraPhoto();
-				}
-				break;
-			} // ACTION_TAKE_PHOTO_B
-
-			case ACTION_TAKE_PHOTO_S: {
-				if (resultCode == RESULT_OK) {
-					handleSmallCameraPhoto(data);
-				}
-				break;
-			} // ACTION_TAKE_PHOTO_S
-
-		} // switch
-	}
 
 	// Some lifecycle callbacks so that the image can survive orientation change
 	@Override
