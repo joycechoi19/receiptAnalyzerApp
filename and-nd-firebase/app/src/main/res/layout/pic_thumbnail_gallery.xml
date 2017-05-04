@@ -4,33 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        >
 
-        <Button android:text="@string/btnIntendV" android:id="@+id/btnIntendV"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/tvInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"
+        android:text="Take a video of your receipt or take a video of your reaction after having saved your receipt! Then click done to get back to the origin screen." />
+
+    <Button
+        android:id="@+id/btnIntendV"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"
+        android:text="@string/btnIntendV" />
 
     <Button
         android:id="@+id/btnReturn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Done" />
-
-    <ImageView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:visibility="visible"
-        android:id="@+id/imageView1" />
-    <VideoView
-        android:layout_height="404dp"
-        android:layout_width="wrap_content"
-        android:visibility="invisible"
-        android:id="@+id/videoView1" />
+        android:text="Done"
+        android:layout_weight="0.02" />
 
 </LinearLayout>
