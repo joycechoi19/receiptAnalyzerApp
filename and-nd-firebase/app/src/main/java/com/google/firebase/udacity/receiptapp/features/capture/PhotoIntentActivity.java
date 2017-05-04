@@ -51,12 +51,10 @@ public class PhotoIntentActivity extends Activity {
 
 	private AlbumStorageDirFactory mAlbumStorageDirFactory = null;
 
-
 	/* Photo album for this application */
 	private String getAlbumName() {
 		return getString(R.string.album_name);
 	}
-
 
 	private File getAlbumDir() {
 		File storageDir = null;
