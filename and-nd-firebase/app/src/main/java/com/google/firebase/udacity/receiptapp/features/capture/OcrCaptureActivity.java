@@ -521,7 +521,10 @@ public final class OcrCaptureActivity extends AppCompatActivity {
             // go back to BoxActivity
             Intent i = new Intent(OcrCaptureActivity.this,
                     //need to name class below
-                    BoxActivity.class);
+                    PhotoIntentActivity.class);
+//            Intent i = new Intent(OcrCaptureActivity.this,
+//                    //need to name class below
+//                    BoxActivity.class);
             startActivity(i);
         }
     }
