@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                             AuthUI.getInstance()
                                     .createSignInIntentBuilder()
                                     .setTheme(R.style.FirebaseLoginTheme)
-                                    .setLogo(R.drawable.logo)
+                                    .setLogo(R.drawable.logo_small)
                                     .setIsSmartLockEnabled(false)
                                     .setProviders(
                                             AuthUI.EMAIL_PROVIDER)
