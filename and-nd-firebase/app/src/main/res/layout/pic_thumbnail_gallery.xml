@@ -3,27 +3,30 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:gravity="center">
 
     <TextView
         android:id="@+id/tvInstructions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.01"
-        android:text="Take a video of your receipt or take a video of your reaction after having saved your receipt! Then click done to get back to the origin screen." />
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="20dp"
+        android:text="Take a video of your receipt or take a video of your reaction after having saved your receipt! Then click done to get back to the origin screen."
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/btnIntendV"
-        android:layout_width="176dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="0.01"
-        android:text="@string/btnIntendV" />
+        android:text="@string/btnIntendV"
+        style="@style/ButtonColor"/>
 
     <Button
         android:id="@+id/btnReturn"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Done"
-        android:layout_weight="0.02" />
+        style="@style/ButtonColor"/>
 
 </LinearLayout>
