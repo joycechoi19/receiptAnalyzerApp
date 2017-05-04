@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.firebase.udacity.receiptapp.R;
@@ -39,7 +40,7 @@ class BoxAdapter extends RecyclerView.Adapter<BoxAdapter.ViewHolder> {
      * data item (in our case, a CardView).
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
-        private CardView mCardView;
+        private RelativeLayout mReceiptView;
         private TextView mStoreView;
         private TextView mAmountView;
         private TextView mDateView;
@@ -51,7 +52,7 @@ class BoxAdapter extends RecyclerView.Adapter<BoxAdapter.ViewHolder> {
          */
         ViewHolder(View v) {
             super(v);
-            mCardView = (CardView) v.findViewById(R.id.view_card_receipt);
+            mReceiptView = (RelativeLayout) v.findViewById(R.id.relative_receipt);
             mStoreView = (TextView) v.findViewById(R.id.text_receipt_store);
             mAmountView = (TextView) v.findViewById(R.id.text_receipt_amount);
             mDateView = (TextView) v.findViewById(R.id.text_receipt_date);
@@ -101,7 +102,7 @@ class BoxAdapter extends RecyclerView.Adapter<BoxAdapter.ViewHolder> {
             dataStatus = 0;
         } else {
             v = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.card_receipt, parent, false);
+                    .inflate(R.layout.view_receipt, parent, false);
             dataStatus = 1;
         }
         // set the view's size, margins, etc
@@ -127,7 +128,7 @@ class BoxAdapter extends RecyclerView.Adapter<BoxAdapter.ViewHolder> {
             holder.mAmountView.setText(currency);
             holder.mDateView.setText(mReceiptList.get(position).getDate());
             // onClickListener calls detailed receipt view (fragment)
-            holder.mCardView.setOnClickListener(new View.OnClickListener() {
+            holder.mReceiptView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Log.d(TAG, "position of item selected is: " + idx);

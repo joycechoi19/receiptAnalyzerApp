@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.UiThread;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -75,8 +76,9 @@ implements BoxAdapter.OnChoiceSelectedListener {
             // initialize recyclerview for receipts
             mRecyclerView = (RecyclerView) findViewById(R.id.view_recycler_box);
             mRecyclerView.setHasFixedSize(true);
-            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
+            LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
             mRecyclerView.setLayoutManager(mLayoutManager);
+            mRecyclerView.addItemDecoration(new DividerItemDecoration(getApplicationContext(), mLayoutManager.getOrientation()));
 
             // adds a listener that fires whenever the structure of the
             // receipt nodes under this user changes in the database
